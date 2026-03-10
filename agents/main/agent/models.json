@@ -1,0 +1,31 @@
+{
+  "providers": {
+    "miaoda": {
+      "baseUrl": "https://innerapi.aiforce.cloud/innerapi/api/v1/sgw/model/proxy",
+      "apiKey": "secretref-managed",
+      "api": "openai-completions",
+      "headers": {
+        "x-api-key": "186899_app_4jpd2jyqtwqgt_preview"
+      },
+      "models": [
+        {
+          "id": "miaoda-model-auto",
+          "name": "妙搭",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 8192,
+          "api": "openai-completions"
+        }
+      ]
+    }
+  }
+}

@@ -1,4 +1,27 @@
 {
   "version": 1,
-  "jobs": []
+  "jobs": [
+    {
+      "id": "daily-ai-news-push",
+      "name": "每日AI新闻推送",
+      "description": "每天早上6:00自动搜索AI和OpenClaw相关的热门新闻并推送到飞书",
+      "enabled": true,
+      "schedule": {
+        "type": "cron",
+        "expression": "0 6 * * *",
+        "timezone": "Asia/Shanghai"
+      },
+      "action": {
+        "type": "script",
+        "script": "skills/ai-news-daily/scripts/send-daily-news.sh"
+      },
+      "retry": {
+        "maxAttempts": 3,
+        "delay": 60
+      },
+      "notification": {
+        "onError": true
+      }
+    }
+  ]
 }
