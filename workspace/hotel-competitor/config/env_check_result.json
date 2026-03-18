@@ -1,0 +1,39 @@
+{
+  "score": 70,
+  "mode": "standard",
+  "checks": {
+    "python": {
+      "status": "✅",
+      "version": "3.10.12",
+      "message": "Python 3.10.12"
+    },
+    "node": {
+      "status": "✅",
+      "version": "v22.21.0",
+      "message": "Node.js v22.21.0",
+      "optional": true
+    },
+    "amap_key": {
+      "status": "✅",
+      "message": "高德 API Key 已配置",
+      "source": "config/amap_key.json"
+    },
+    "scrapling": {
+      "status": "✅",
+      "message": "Scrapling 已安装（可用于 OTA 价格抓取）",
+      "optional": true
+    },
+    "brave_api": {
+      "status": "❌",
+      "message": "Brave API 未配置",
+      "optional": true
+    },
+    "feishu": {
+      "status": "⚠️",
+      "message": "飞书集成未安装（可选，用于报告分享）",
+      "optional": true
+    }
+  },
+  "missing_deps": [],
+  "optional_deps": []
+}

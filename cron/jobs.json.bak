@@ -5,7 +5,7 @@
       "id": "daily-ai-news-push",
       "name": "每日AI新闻推送",
       "description": "每天早上6:00自动搜索AI和OpenClaw相关的热门新闻并推送到飞书",
-      "enabled": false,
+      "enabled": true,
       "schedule": {
         "type": "cron",
         "expression": "0 6 * * *",
@@ -23,7 +23,7 @@
         "onError": true
       },
       "state": {
-        "scheduleErrorCount": 3,
+        "scheduleErrorCount": 2,
         "lastError": "schedule error: Error: invalid cron schedule: expr is required"
       },
       "wakeMode": "now",
