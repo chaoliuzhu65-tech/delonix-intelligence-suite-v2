@@ -27,6 +27,10 @@ import { extractRawTextFromEvent, isLikelyAbortText } from "./abort-detect.js";
  * and starts a WebSocket connection. Returns a Promise that resolves
  * when the abort signal fires (or immediately if already aborted).
  */
+/** Get the latest resolved config from the gateway runtime snapshot. */
+function freshCfg() {
+    return LarkClient.runtime.config.loadConfig();
+}
 async function monitorSingleAccount(params) {
     const { cfg, account, runtime, abortSignal } = params;
     const { accountId } = account;
@@ -108,7 +112,7 @@ async function monitorSingleAccount(params) {
                                     chatType: event.message?.chat_type || undefined,
                                     threadId,
                                 }, () => handleFeishuMessage({
-                                    cfg,
+                                    cfg: freshCfg(),
                                     event,
                                     botOpenId: lark.botOpenId,
                                     runtime,
@@ -143,7 +147,7 @@ async function monitorSingleAccount(params) {
                         task: async () => {
                             try {
                                 await handleFeishuReaction({
-                                    cfg,
+                                    cfg: freshCfg(),
                                     event,
                                     botOpenId: lark.botOpenId,
                                     runtime,
@@ -183,7 +187,7 @@ async function monitorSingleAccount(params) {
             // eslint-disable-next-line @typescript-eslint/no-explicit-any
             "card.action.trigger": (async (data) => {
                 try {
-                    return await handleCardAction(data, cfg, accountId);
+                    return await handleCardAction(data, freshCfg(), accountId);
                 }
                 catch (err) {
                     trace.warn(`card.action.trigger handler error: ${err}`);
