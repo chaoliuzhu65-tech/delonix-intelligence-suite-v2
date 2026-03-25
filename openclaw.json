@@ -32,6 +32,30 @@
         "source": "file",
         "path": "/home/gem/workspace/.force/openclaw/miaoda-provider-key",
         "mode": "singleValue"
+      },
+      "ark-provider": {
+        "source": "value",
+        "value": "c961bb1d-bae4-499f-a249-9d42c11a89d0"
+      },
+      "qwen3-provider": {
+        "source": "value",
+        "value": "sk-04cbf23f1bd442cbb58d21ed1c43c095"
+      },
+      "tavily-provider": {
+        "source": "value",
+        "value": "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"
+      },
+      "amap-backend-provider": {
+        "source": "value",
+        "value": "0f9da10a87fa96c564f2d3d0f459fd6f"
+      },
+      "amap-frontend-provider": {
+        "source": "value",
+        "value": "2ae5d6a4bbb5f44bcad65d6741d17115"
+      },
+      "amap-mini-provider": {
+        "source": "value",
+        "value": "aa8cb3ff7ba7c7351b89264398ce2f05"
       }
     }
   },
@@ -61,6 +85,80 @@
               "output": 0,
               "cacheRead": 0,
               "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "ark": {
+        "baseUrl": "https://ark.cn-beijing.volces.com/api/coding/v3",
+        "apiKey": {
+          "source": "provider",
+          "provider": "ark-provider"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "anthropic-sonnet-4-20250514",
+            "name": "Ark Sonnet 4",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 3,
+              "output": 15,
+              "cacheRead": 0.15,
+              "cacheWrite": 1.5
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "qwen": {
+        "baseUrl": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "apiKey": {
+          "source": "provider",
+          "provider": "qwen3-provider"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3-235b",
+            "name": "千问3",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0
+            },
+            "contextWindow": 100000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "aliyun-coding": {
+        "baseUrl": "https://coding.dashscope.aliyuncs.com/v1",
+        "apiKey": {
+          "source": "value",
+          "value": "sk-sp-93e3b0797c3c42c287388d999453b016"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "anthropic-sonnet-4-20250514",
+            "name": "Ark Sonnet (阿里云Coding)",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 3,
+              "output": 15
             },
             "contextWindow": 200000,
             "maxTokens": 8192
