@@ -269,7 +269,8 @@
     "bind": "loopback",
     "controlUi": {
       "allowedOrigins": [
-        "https://delonix-app_4jpd2jyqtwqgt-1859275099545785.aiforce.run"
+        "https://delonix-app_4jpd2jyqtwqgt-1859275099545785.aiforce.run",
+        "https://miaoda.feishu.cn"
       ],
       "dangerouslyDisableDeviceAuth": true
     },
