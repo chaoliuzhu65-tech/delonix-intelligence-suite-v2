@@ -23,6 +23,7 @@
     "node": ">=22"
   },
   "dependencies": {
+    "@larksuite/openclaw-lark": "^2026.4.1",
     "@larksuiteoapi/node-sdk": "^1.60.0",
     "@sinclair/typebox": "0.34.48",
     "image-size": "^2.0.2",

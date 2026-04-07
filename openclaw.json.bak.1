@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-07T03:02:01.102Z"
+    "lastTouchedAt": "2026-04-07T06:36:51.673Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -235,7 +235,44 @@
     "deny": [],
     "sessions": {
       "visibility": "all"
-    }
+    },
+    "alsoAllow": [
+      "feishu_bitable_app",
+      "feishu_bitable_app_table",
+      "feishu_bitable_app_table_field",
+      "feishu_bitable_app_table_record",
+      "feishu_bitable_app_table_view",
+      "feishu_calendar_calendar",
+      "feishu_calendar_event",
+      "feishu_calendar_event_attendee",
+      "feishu_calendar_freebusy",
+      "feishu_chat",
+      "feishu_chat_members",
+      "feishu_create_doc",
+      "feishu_doc_comments",
+      "feishu_doc_media",
+      "feishu_drive_file",
+      "feishu_fetch_doc",
+      "feishu_get_user",
+      "feishu_im_bot_image",
+      "feishu_im_user_fetch_resource",
+      "feishu_im_user_get_messages",
+      "feishu_im_user_get_thread_messages",
+      "feishu_im_user_message",
+      "feishu_im_user_search_messages",
+      "feishu_oauth",
+      "feishu_oauth_batch_auth",
+      "feishu_search_doc_wiki",
+      "feishu_search_user",
+      "feishu_sheet",
+      "feishu_task_comment",
+      "feishu_task_subtask",
+      "feishu_task_task",
+      "feishu_task_tasklist",
+      "feishu_update_doc",
+      "feishu_wiki_space",
+      "feishu_wiki_space_node"
+    ]
   },
   "messages": {
     "ackReactionScope": "group-mentions"
@@ -252,12 +289,12 @@
   "channels": {
     "feishu": {
       "enabled": true,
-      "connectionMode": "websocket",
       "appId": "cli_a948e1a790b8dcdd",
       "appSecret": {
         "source": "file",
         "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret"
       },
+      "connectionMode": "websocket",
       "domain": "feishu"
     }
   },
@@ -443,7 +480,6 @@
   },
   "plugins": {
     "allow": [
-      "feishu",
       "feishu-greeting",
       "miaoda-keepalive",
       "browser"
@@ -474,10 +510,10 @@
       },
       "openclaw-lark": {
         "source": "archive",
-        "sourcePath": "/tmp/openclaw-lark-p03V8x/larksuite-openclaw-lark-2026.4.1.tgz",
+        "sourcePath": "/tmp/openclaw-lark-cy11sH/larksuite-openclaw-lark-2026.4.1.tgz",
         "installPath": "/home/gem/workspace/agent/extensions/openclaw-lark",
         "version": "2026.4.1",
-        "installedAt": "2026-04-07T03:01:57.267Z"
+        "installedAt": "2026-04-07T05:10:43.014Z"
       }
     }
   }

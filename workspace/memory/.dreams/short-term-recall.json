@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-07T13:43:00.527Z",
+  "entries": {
+    "memory:memory/2026-04-06.md:1:32": {
+      "key": "memory:memory/2026-04-06.md:1:32",
+      "path": "memory/2026-04-06.md",
+      "startLine": 1,
+      "endLine": 32,
+      "source": "memory",
+      "snippet": "# 2026-04-06 工作日志 ## 核心任务 ### 1. 飞书MCP Bot框架部署 - 官方Demo克隆到 ~/.openclaw/workspace/skills/feishu-mcp-bot/ - 添加到\"多AI协同知识共享池\" (record_id: recvg0DlezK666) - 结论：暂不部署MCP Server，现有OpenAPI已覆盖全部能力 ### 2. 妙搭/Skills同步到共享池 - 添加技能：feishu-send-message, miaoda-doc-parse, miaoda-image-understanding, miaoda-speech-to-text, miaoda-text-gen-image, miaoda-web-search, miaoda-web-fetch, notebook-lm, wechat-article-reader - 已完成全量同步 ### 3. 竞品调研报告 - 报告版本：V2.0深度版 - 调研对象：天津瑞湾开元名都酒店 vs 5家竞品（万丽泰达、皇冠假日、希尔顿、洲际、泰达国际） - 数据来源：携程/Booking/Trip.com/Klook 多平台 - 飞书文档：https://www.feishu.cn/docx/EXzUdKOlcoQvu2xuPxccxd1gnJd ### 4. 沟通预约系统搭建 - 创建沟通记录表格：https://delonix.feishu.cn/base/CWsubL0cJaSQ2wsg7DTcg2qincf - 群成员OpenID已导入（虫洞效率群",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.3090575283921814,
+      "maxScore": 0.3090575283921814,
+      "firstRecalledAt": "2026-04-07T13:43:00.527Z",
+      "lastRecalledAt": "2026-04-07T13:43:00.527Z",
+      "queryHashes": [
+        "eabe730abfb2"
+      ],
+      "recallDays": [
+        "2026-04-07"
+      ],
+      "conceptTags": [
+        "record-id",
+        "妙搭/skills同步到共享池",
+        "feishu-send-message",
+        "miaoda-doc-parse",
+        "miaoda-image-understanding",
+        "miaoda-speech-to-text",
+        "miaoda-text-gen-image",
+        "miaoda-web-search"
+      ]
+    }
+  }
+}

@@ -34,10 +34,10 @@
       "agentId": "main",
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "虫洞效率群会议邀约测试",
-      "enabled": true,
+      "enabled": false,
       "deleteAfterRun": true,
       "createdAtMs": 1775485005066,
-      "updatedAtMs": 1775485005066,
+      "updatedAtMs": 1775523608296,
       "schedule": {
         "at": "2026-04-07T01:00:00.000Z",
         "kind": "at"
@@ -52,8 +52,133 @@
         "mode": "none"
       },
       "state": {
-        "nextRunAtMs": 1775523600000,
-        "runningAtMs": 1775523600005
+        "lastRunAtMs": 1775523600008,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 8288,
+        "lastError": "Feishu account \"default\" not configured",
+        "lastDeliveryStatus": "not-requested",
+        "consecutiveErrors": 1
+      }
+    },
+    {
+      "id": "49f9b6b8-cb9d-4765-89bf-039c22e5b1ca",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "每小时群知识积累",
+      "description": "每小时学习飞书群消息，积累酒店知识",
+      "enabled": true,
+      "createdAtMs": 1775549010070,
+      "updatedAtMs": 1775556284290,
+      "schedule": {
+        "expr": "0 * * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 300000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请执行群知识学习任务：\n1. 搜索飞书群，找出24小时内有更新的酒店相关群（关键词：酒店、经营、市场、收益、虫洞）\n2. 获取最新消息（每群最多20条）\n3. 分析消息风格、关键字、行动项\n4. 更新 memory/group-learning-tracker.md 记录已学习群\n5. 如果学到新内容，更新到 memory/2026-04-07.md\n\n注意：只学习新消息，不要重复学习已记录的群"
+      },
+      "delivery": {
+        "channel": "feishu",
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775559747565,
+        "lastRunAtMs": 1775556147570,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 136720,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "86e1a3de-3aeb-4f60-85fe-9daa04e6ea95",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "每日知识分享",
+      "description": "每天分享学习到的群知识到共享池",
+      "enabled": true,
+      "createdAtMs": 1775549018244,
+      "updatedAtMs": 1775549018244,
+      "schedule": {
+        "expr": "0 20 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请执行每日知识分享任务：\n1. 读取 memory/group-learning-tracker.md 查看今日学习的群\n2. 读取 memory/2026-04-07.md 查看今日积累的知识\n3. 如果有新的学习内容：\n   - 写入\"多AI协同知识共享池\"的\"💡 经验思路库\"表格\n   - 分享到\"虫洞效率群\"或相关群\n4. 格式：日期 + 学到的新关键字/风格 + 实践建议\n\n目标：让其他AI伙伴知道今天学到了什么，避免重复学习"
+      },
+      "delivery": {
+        "channel": "feishu",
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775563200000
+      }
+    },
+    {
+      "id": "488d025f-33cc-4322-8bcb-feba06471bf1",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "每日行业信息搜索",
+      "description": "每天上午9点搜索行业最新信息",
+      "enabled": true,
+      "createdAtMs": 1775556562204,
+      "updatedAtMs": 1775556562204,
+      "schedule": {
+        "expr": "0 9 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行外网搜索任务：\n1. 搜索酒店行业最新动态（携程、美团、飞猪等）\n2. 搜索AI Agent最新技术/产品\n3. 搜索德拢集团相关新闻\n4. 提炼3条最重要信息\n5. 更新到 memory/2026-04-07.md\n\n目标：保持对行业动态的持续关注"
+      },
+      "delivery": {
+        "channel": "feishu",
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775610000000
+      }
+    },
+    {
+      "id": "f2809a8c-0682-4f60-b450-f82988416093",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "每日AI资讯搜索",
+      "description": "每天下午3点搜索AI最新资讯",
+      "enabled": true,
+      "createdAtMs": 1775556568914,
+      "updatedAtMs": 1775556568914,
+      "schedule": {
+        "expr": "0 15 * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "执行AI资讯搜索任务：\n1. 搜索AI Agent最新产品动态（OpenAI、Anthropic、阿里Qwen、MiniMax等）\n2. 搜索OpenClaw最新功能\n3. 搜索多Agent协作最新技术\n4. 提炼2条最重要信息\n5. 更新到 memory/2026-04-07.md\n\n目标：保持对AI领域动态的持续关注"
+      },
+      "delivery": {
+        "channel": "feishu",
+        "mode": "announce"
+      },
+      "state": {
+        "nextRunAtMs": 1775631600000
       }
     }
   ]
