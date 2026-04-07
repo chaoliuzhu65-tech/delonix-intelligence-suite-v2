@@ -28,6 +28,32 @@
       },
       "wakeMode": "now",
       "sessionTarget": "main"
+    },
+    {
+      "id": "03556061-849c-4c82-9b09-df7a45850b22",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "虫洞效率群会议邀约测试",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1775485005066,
+      "updatedAtMs": 1775485005066,
+      "schedule": {
+        "at": "2026-04-07T01:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "【定时任务】明天9:00给虫洞效率群发送一对一沟通邀约消息"
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {
+        "nextRunAtMs": 1775523600000
+      }
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-03-11T07:49:56.819Z"
+    "lastTouchedAt": "2026-04-05T03:45:36.599Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -52,7 +52,8 @@
           {
             "id": "miaoda-model-auto",
             "name": "妙搭",
-            "reasoning": true,
+            "api": "openai-completions",
+            "reasoning": false,
             "input": [
               "text"
             ],
@@ -64,6 +65,111 @@
             },
             "contextWindow": 200000,
             "maxTokens": 8192
+          },
+          {
+            "id": "miaoda-auto-multimodal",
+            "name": "妙搭多模态",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "miaoda-model-flash",
+            "name": "妙搭 Flash",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 8192
+          },
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 30000
+          },
+          {
+            "id": "qwen-3.5",
+            "name": "Qwen 3.5",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "minimax-m2.5",
+            "name": "MiniMax M2.5",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "doubao-seed-2.0-pro",
+            "name": "豆包 Seed 2.0 Pro",
+            "api": "openai-completions",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
           }
         ]
       }
@@ -76,7 +182,25 @@
       },
       "models": {
         "miaoda/miaoda-model-auto": {
-          "alias": "Auto"
+          "alias": "Miaoda Auto"
+        },
+        "miaoda/doubao-seed-2.0-pro": {
+          "alias": "豆包 Seed 2.0 Pro"
+        },
+        "miaoda/miaoda-auto-multimodal": {
+          "alias": "Miaoda Multimodal"
+        },
+        "miaoda/miaoda-model-flash": {
+          "alias": "Miaoda Flash"
+        },
+        "miaoda/glm-5": {
+          "alias": "GLM-5"
+        },
+        "miaoda/qwen-3.5": {
+          "alias": "Qwen 3.5"
+        },
+        "miaoda/minimax-m2.5": {
+          "alias": "MiniMax M2.5"
         }
       },
       "workspace": "/home/gem/workspace/agent/workspace",
@@ -120,7 +244,6 @@
       "feishu_bitable_app_table_view",
       "feishu_doc_comments",
       "feishu_doc_media",
-      "feishu_drive_file",
       "feishu_wiki_space",
       "feishu_wiki_space_node",
       "feishu_sheet"
@@ -152,12 +275,19 @@
       ],
       "appId": "cli_a93aa1cc63389cee",
       "appSecret": "KOIpik0vS2wOJIBKyIwtTdIoKBB4sXNp",
+      "verificationToken": "2jl1rncZgXXD9cJRidn0PecXt52rgmJz",
+      "encryptKey": "2jl1rncZgXXD9cJRidn0PecXt52rgmJz",
       "domain": "feishu",
-      "streaming": false,
+      "streaming": true,
       "threadSession": true,
       "footer": {
         "elapsed": false,
         "status": false
+      },
+      "groups": {
+        "*": {
+          "enabled": true
+        }
       }
     }
   },
@@ -172,7 +302,8 @@
     "bind": "loopback",
     "controlUi": {
       "allowedOrigins": [
-        "https://delonix-app_4jpd2jyqtwqgt-1859275099545785.aiforce.run"
+        "https://delonix-app_4jpd2jyqtwqgt-1859275099545785.aiforce.run",
+        "https://miaoda.feishu.cn"
       ],
       "dangerouslyDisableDeviceAuth": true
     },
@@ -310,6 +441,33 @@
       },
       "tmux": {
         "enabled": false
+      },
+      "feishu-bitable": {
+        "enabled": true
+      },
+      "delong-duty-log": {
+        "enabled": true
+      },
+      "delong-complaint-handler": {
+        "enabled": true
+      },
+      "delong-occupancy-forecast": {
+        "enabled": true
+      },
+      "delong-quality-inspection": {
+        "enabled": true
+      },
+      "delong-scheduling": {
+        "enabled": true
+      },
+      "delong-emergency-plan": {
+        "enabled": true
+      },
+      "delong-inspection": {
+        "enabled": true
+      },
+      "delong-guest-reminder": {
+        "enabled": true
       }
     }
   },
