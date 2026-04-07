@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-04-05T03:45:36.599Z"
+    "lastTouchedVersion": "2026.4.5",
+    "lastTouchedAt": "2026-04-07T03:02:01.102Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -232,22 +232,7 @@
   },
   "tools": {
     "profile": "full",
-    "deny": [
-      "web_search",
-      "web_fetch",
-      "tts",
-      "agents_list",
-      "feishu_task_task",
-      "feishu_task_tasklist",
-      "feishu_task_comment",
-      "feishu_task_subtask",
-      "feishu_bitable_app_table_view",
-      "feishu_doc_comments",
-      "feishu_doc_media",
-      "feishu_wiki_space",
-      "feishu_wiki_space_node",
-      "feishu_sheet"
-    ],
+    "deny": [],
     "sessions": {
       "visibility": "all"
     }
@@ -267,28 +252,13 @@
   "channels": {
     "feishu": {
       "enabled": true,
-      "requireMention": true,
-      "groupPolicy": "open",
-      "dmPolicy": "allowlist",
-      "allowFrom": [
-        "ou_8dd4dc0180a2fb74c692f17b94c94d8e"
-      ],
-      "appId": "cli_a93aa1cc63389cee",
-      "appSecret": "KOIpik0vS2wOJIBKyIwtTdIoKBB4sXNp",
-      "verificationToken": "2jl1rncZgXXD9cJRidn0PecXt52rgmJz",
-      "encryptKey": "2jl1rncZgXXD9cJRidn0PecXt52rgmJz",
-      "domain": "feishu",
-      "streaming": true,
-      "threadSession": true,
-      "footer": {
-        "elapsed": false,
-        "status": false
+      "connectionMode": "websocket",
+      "appId": "cli_a948e1a790b8dcdd",
+      "appSecret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret"
       },
-      "groups": {
-        "*": {
-          "enabled": true
-        }
-      }
+      "domain": "feishu"
     }
   },
   "discovery": {
@@ -326,121 +296,121 @@
     },
     "entries": {
       "1password": {
-        "enabled": false
+        "enabled": true
       },
       "apple-notes": {
-        "enabled": false
+        "enabled": true
       },
       "apple-reminders": {
-        "enabled": false
+        "enabled": true
       },
       "bear-notes": {
-        "enabled": false
+        "enabled": true
       },
       "bluebubbles": {
-        "enabled": false
+        "enabled": true
       },
       "blucli": {
-        "enabled": false
+        "enabled": true
       },
       "camsnap": {
-        "enabled": false
+        "enabled": true
       },
       "coding-agent": {
-        "enabled": false
+        "enabled": true
       },
       "discord": {
         "enabled": false
       },
       "eightctl": {
-        "enabled": false
+        "enabled": true
       },
       "gemini": {
-        "enabled": false
+        "enabled": true
       },
       "gifgrep": {
-        "enabled": false
+        "enabled": true
       },
       "gog": {
-        "enabled": false
+        "enabled": true
       },
       "goplaces": {
-        "enabled": false
+        "enabled": true
       },
       "imsg": {
-        "enabled": false
+        "enabled": true
       },
       "model-usage": {
-        "enabled": false
+        "enabled": true
       },
       "nano-banana-pro": {
-        "enabled": false
+        "enabled": true
       },
       "notion": {
-        "enabled": false
+        "enabled": true
       },
       "openai-image-gen": {
-        "enabled": false
+        "enabled": true
       },
       "openai-whisper": {
-        "enabled": false
+        "enabled": true
       },
       "openai-whisper-api": {
-        "enabled": false
+        "enabled": true
       },
       "openhue": {
-        "enabled": false
+        "enabled": true
       },
       "oracle": {
-        "enabled": false
+        "enabled": true
       },
       "ordercli": {
-        "enabled": false
+        "enabled": true
       },
       "peekaboo": {
-        "enabled": false
+        "enabled": true
       },
       "sag": {
-        "enabled": false
+        "enabled": true
       },
       "slack": {
-        "enabled": false
+        "enabled": true
       },
       "sonoscli": {
-        "enabled": false
+        "enabled": true
       },
       "spotify-player": {
-        "enabled": false
+        "enabled": true
       },
       "summarize": {
-        "enabled": false
+        "enabled": true
       },
       "things-mac": {
-        "enabled": false
+        "enabled": true
       },
       "trello": {
-        "enabled": false
+        "enabled": true
       },
       "voice-call": {
-        "enabled": false
+        "enabled": true
       },
       "wacli": {
-        "enabled": false
+        "enabled": true
       },
       "xurl": {
-        "enabled": false
+        "enabled": true
       },
       "feishu-task": {
         "enabled": true
       },
       "gh-issues": {
-        "enabled": false
+        "enabled": true
       },
       "github": {
-        "enabled": false
+        "enabled": true
       },
       "tmux": {
-        "enabled": false
+        "enabled": true
       },
       "feishu-bitable": {
         "enabled": true
@@ -473,38 +443,27 @@
   },
   "plugins": {
     "allow": [
-      "feishu-openclaw-plugin",
+      "feishu",
       "feishu-greeting",
-      "miaoda-keepalive"
+      "miaoda-keepalive",
+      "browser"
     ],
     "entries": {
       "feishu": {
         "enabled": false
       },
-      "feishu-openclaw-plugin": {
-        "enabled": true
-      },
       "feishu-greeting": {
-        "enabled": true,
-        "config": {
-          "message": "👋 Hi，我是**晁留柱的助手**，一只生活在飞书里的 🦞 小龙虾，我已准备就绪，并学习了[如何使用飞书](https://bytedance.larkoffice.com/docx/MFK7dDFLFoVlOGxWCv5cTXKmnMh)，有什么需要帮忙的随时说~",
-          "targets": [
-            "ou_8dd4dc0180a2fb74c692f17b94c94d8e"
-          ]
-        }
+        "enabled": false
       },
       "miaoda-keepalive": {
         "enabled": true,
         "config": {}
+      },
+      "browser": {
+        "enabled": true
       }
     },
     "installs": {
-      "feishu-openclaw-plugin": {
-        "source": "npm",
-        "spec": "@larksuiteoapi/feishu-openclaw-plugin",
-        "installPath": "./extensions/feishu-openclaw-plugin",
-        "version": "2026.3.8-beta.0"
-      },
       "feishu-greeting": {
         "source": "path",
         "installPath": "./extensions/feishu-greeting"
@@ -512,6 +471,13 @@
       "miaoda-keepalive": {
         "source": "path",
         "installPath": "./extensions/miaoda-keepalive"
+      },
+      "openclaw-lark": {
+        "source": "archive",
+        "sourcePath": "/tmp/openclaw-lark-p03V8x/larksuite-openclaw-lark-2026.4.1.tgz",
+        "installPath": "/home/gem/workspace/agent/extensions/openclaw-lark",
+        "version": "2026.4.1",
+        "installedAt": "2026-04-07T03:01:57.267Z"
       }
     }
   }

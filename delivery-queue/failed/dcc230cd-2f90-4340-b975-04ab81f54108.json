@@ -1,0 +1,16 @@
+{
+  "id": "dcc230cd-2f90-4340-b975-04ab81f54108",
+  "enqueuedAt": 1775523608271,
+  "channel": "feishu",
+  "to": "user:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "⏰ **定时任务提醒**\n\n明天上午9:00需要给\"虫洞效率群\"发送一对一沟通邀约消息。\n\n需要我帮你：\n1. 📝 起草邀约消息内容\n2. 🎯 确定邀约对象名单\n3. 📤 准备发送（可以设置定时发送）\n\n或者你有其他具体安排？🦞",
+      "mediaUrls": []
+    }
+  ],
+  "retryCount": 5,
+  "lastAttemptAt": 1775531825130,
+  "lastError": "Request failed with status code 400"
+}

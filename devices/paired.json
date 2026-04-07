@@ -48,7 +48,8 @@
       "operator.read",
       "operator.write",
       "operator.approvals",
-      "operator.pairing"
+      "operator.pairing",
+      "operator.talk.secrets"
     ],
     "approvedScopes": [
       "operator.admin",

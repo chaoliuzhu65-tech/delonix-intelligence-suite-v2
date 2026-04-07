@@ -1,7 +1,7 @@
 {
   "meta": {
-    "lastTouchedVersion": "2026.3.8",
-    "lastTouchedAt": "2026-04-05T07:09:06.271Z"
+    "lastTouchedVersion": "2026.4.5",
+    "lastTouchedAt": "2026-04-07T03:19:54.094Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -253,29 +253,12 @@
     "feishu": {
       "enabled": true,
       "connectionMode": "websocket",
-      "requireMention": true,
-      "groupPolicy": "open",
-      "dmPolicy": "allowlist",
-      "allowFrom": [
-        "ou_8dd4dc0180a2fb74c692f17b94c94d8e",
-        "ou_fc1e75d64fec6e10ce94a51adc6f6409"
-      ],
       "appId": "cli_a948e1a790b8dcdd",
-      "appSecret": "s11GFgEsyAtFdWRLVlkIOf2IAn3bUxP2",
-      "verificationToken": "2jl1rncZgXXD9cJRidn0PecXt52rgmJz",
-      "encryptKey": "2jl1rncZgXXD9cJRidn0PecXt52rgmJz",
-      "domain": "feishu",
-      "streaming": true,
-      "threadSession": true,
-      "footer": {
-        "elapsed": false,
-        "status": false
+      "appSecret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret"
       },
-      "groups": {
-        "*": {
-          "enabled": true
-        }
-      }
+      "domain": "feishu"
     }
   },
   "discovery": {
@@ -460,38 +443,27 @@
   },
   "plugins": {
     "allow": [
-      "feishu-openclaw-plugin",
+      "feishu",
       "feishu-greeting",
-      "miaoda-keepalive"
+      "miaoda-keepalive",
+      "browser"
     ],
     "entries": {
       "feishu": {
         "enabled": false
       },
-      "feishu-openclaw-plugin": {
-        "enabled": true
-      },
       "feishu-greeting": {
-        "enabled": true,
-        "config": {
-          "message": "👋 Hi，我是**晁留柱的助手**，一只生活在飞书里的 🦞 小龙虾，我已准备就绪，并学习了[如何使用飞书](https://bytedance.larkoffice.com/docx/MFK7dDFLFoVlOGxWCv5cTXKmnMh)，有什么需要帮忙的随时说~",
-          "targets": [
-            "ou_8dd4dc0180a2fb74c692f17b94c94d8e"
-          ]
-        }
+        "enabled": false
       },
       "miaoda-keepalive": {
         "enabled": true,
         "config": {}
+      },
+      "browser": {
+        "enabled": true
       }
     },
     "installs": {
-      "feishu-openclaw-plugin": {
-        "source": "npm",
-        "spec": "@larksuiteoapi/feishu-openclaw-plugin",
-        "installPath": "./extensions/feishu-openclaw-plugin",
-        "version": "2026.3.8-beta.0"
-      },
       "feishu-greeting": {
         "source": "path",
         "installPath": "./extensions/feishu-greeting"
