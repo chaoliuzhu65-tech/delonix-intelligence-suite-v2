@@ -43,6 +43,7 @@
 
 ## 被引用
 - [[OpenClaw]] - 本实现的基础平台
+- [[Shared Pool]] - 扩展到组织级多 AI 协作
 
 ## OpenClaw 实现差异
 
