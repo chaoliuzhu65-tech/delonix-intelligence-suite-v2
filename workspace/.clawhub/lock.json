@@ -8,6 +8,10 @@
     "ai-podcast": {
       "version": "1.0.11",
       "installedAt": 1775618282320
+    },
+    "coze-cli-skill": {
+      "version": "0.1.0",
+      "installedAt": 1775644381653
     }
   }
 }

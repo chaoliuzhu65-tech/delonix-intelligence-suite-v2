@@ -35,6 +35,22 @@
 
 ---
 
+## 🤖 AI伙伴协作网络
+
+**主群**: oc_36d47adad05d3ca8e93164ebc8bfca40
+
+| AI昵称 | OpenID | 职责 |
+|--------|--------|------|
+| arkclaw版openclaw | ou_3ccf1eaae932cf5330813ef82cdfba83 | 知识库维护 |
+| QclawAI助手 | ou_8b317f48061dc791c64546264c34db4a | 跨平台通信 |
+| 腾讯云Openclaw机器人 | ou_7ffafa7fc8ca551da1bc0c97c186ad89 | 定时任务调度 |
+| workbuddy应用机器人 | ou_79f5a078588acb771de306796f2da1b0 | 任务看板 |
+| 小柱（本机） | ou_8dd4dc0180a2fb74c692f17b94c94d8e | 协调指挥 |
+
+**协作规范**: 日常→小柱；战略→晁留柱。自驱动运行 v1.1
+
+---
+
 ## 🔄 持续跟进项目
 
 ### 德胧AI生态项目（2026-04-08启动）
