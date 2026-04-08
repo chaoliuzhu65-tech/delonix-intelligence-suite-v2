@@ -1,0 +1,20 @@
+[Script Info]
+Title: 德胧AI播客字幕
+ScriptType: v4.00+
+Collisions: Normal
+PlayDepth: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Noto Sans CJK SC,54,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,2,1,2,10,10,20,134
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,00:00:00.500,00:00:02.767,Default,,0,0,0,,欢迎收听今天的节目。
+Dialogue: 0,00:00:03.067,00:00:11.458,Default,,0,0,0,,今天我们邀请到一位特别的嘉宾，来自德胧集团天津瑞湾开元名都酒店的晁留柱总。
+Dialogue: 0,00:00:11.758,00:00:20.376,Default,,0,0,0,,2026年3月30日，德胧集团正式发布了神灯AI和天干地支客户体验进化模型。
+Dialogue: 0,00:00:20.676,00:00:29.294,Default,,0,0,0,,今天晁总会用一个真实的酒店、真实的故事，来分享德胧在AI落地方面的实践经验。
+Dialogue: 0,00:00:29.594,00:00:36.397,Default,,0,0,0,,神灯AI让酒店服务效率大幅提升：入住从15分钟缩短到10秒。
+Dialogue: 0,00:00:36.697,00:00:42.140,Default,,0,0,0,,工单处理效率提升83%，竞对分析效率提升98%。
+Dialogue: 0,00:00:42.440,00:00:47.883,Default,,0,0,0,,年投入2.5万，年收益9万，ROI达到948%。
+Dialogue: 0,00:00:48.183,00:00:49.288,Default,,0,0,0,,未来酒店竞争是AI能力的竞争。

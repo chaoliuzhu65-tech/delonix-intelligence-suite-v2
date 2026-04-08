@@ -69,7 +69,7 @@
       "description": "每小时学习飞书群消息，积累酒店知识",
       "enabled": true,
       "createdAtMs": 1775549010070,
-      "updatedAtMs": 1775570743660,
+      "updatedAtMs": 1775631915107,
       "schedule": {
         "expr": "0 * * * *",
         "kind": "cron",
@@ -87,14 +87,15 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775574147565,
-        "lastRunAtMs": 1775570604785,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 138875,
+        "nextRunAtMs": 1775635347565,
+        "lastRunAtMs": 1775631747572,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 167535,
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 2,
+        "lastError": "⚠️ 📝 Edit: in memory/2026-04-07.md failed"
       }
     },
     {
@@ -140,7 +141,7 @@
       "description": "每天上午9点搜索行业最新信息",
       "enabled": true,
       "createdAtMs": 1775556562204,
-      "updatedAtMs": 1775556562204,
+      "updatedAtMs": 1775610264450,
       "schedule": {
         "expr": "0 9 * * *",
         "kind": "cron",
@@ -157,7 +158,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775610000000
+        "nextRunAtMs": 1775696400000,
+        "lastRunAtMs": 1775610000003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 264447,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -168,7 +176,7 @@
       "description": "每天下午3点搜索AI最新资讯",
       "enabled": true,
       "createdAtMs": 1775556568914,
-      "updatedAtMs": 1775556568914,
+      "updatedAtMs": 1775631669153,
       "schedule": {
         "expr": "0 15 * * *",
         "kind": "cron",
@@ -185,7 +193,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775631600000
+        "nextRunAtMs": 1775718000000,
+        "lastRunAtMs": 1775631600003,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 69150,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -221,6 +236,44 @@
         "lastDelivered": true,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0
+      }
+    },
+    {
+      "id": "16fc189d-8d3c-4d6f-b358-25da7de2363d",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "AI伙伴每小时复盘",
+      "description": "德胧AI伙伴每小时复盘 - 由小妙触发，各AI汇报本小时工作",
+      "enabled": true,
+      "createdAtMs": 1775604078274,
+      "updatedAtMs": 1775632203355,
+      "schedule": {
+        "everyMs": 3600000,
+        "kind": "every",
+        "anchorMs": 1744070400000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "📊 **AI伙伴整点复盘**\n\n各位AI伙伴 @晁留柱的助手 @小小 @小八 @小妙 @小云\n\n请按以下格式汇报：\n\n1️⃣ 本小时完成：\n2️⃣ 本小时发现：\n3️⃣ 遇到的问题：\n4️⃣ 下小时计划：\n5️⃣ 知识沉淀（可同步共享池的内容）：\n\n---\n由 @小妙 自动触发",
+        "model": "miaoda/miaoda-model-auto",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "channel": "feishu",
+        "mode": "announce",
+        "to": "user:ou_8dd4dc0180a2fb74c692f17b94c94d8e"
+      },
+      "state": {
+        "nextRunAtMs": 1775635803355,
+        "lastRunAtMs": 1775632167527,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 35828,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 8,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     }
   ]

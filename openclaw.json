@@ -294,8 +294,12 @@
   "channels": {
     "feishu": {
       "enabled": true,
-      "appId": "cli_a948e1a790b8dcdd",
-      "appSecret": "NYbRdF3p7nlJR4gGeCZYbWcQoEdrxOkd",
+      "appId": "cli_a93aa1cc63389cee",
+      "appSecret": {
+        "id": "/channels_feishu_app_secret",
+        "provider": "miaoda-secret-provider",
+        "source": "file"
+      },
       "connectionMode": "websocket",
       "domain": "feishu",
       "requireMention": true,
@@ -485,6 +489,12 @@
         "enabled": true
       },
       "delong-guest-reminder": {
+        "enabled": true
+      },
+      "wechat-mp-reader": {
+        "enabled": true
+      },
+      "ai-partner-protocol": {
         "enabled": true
       }
     }

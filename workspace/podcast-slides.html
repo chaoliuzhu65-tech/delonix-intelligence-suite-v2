@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+.slide {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px;
+  page-break-after: always;
+}
+.title-slide {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: white;
+  text-align: center;
+}
+.content-slide {
+  background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #1a1a2e;
+}
+.data-slide {
+  background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+  color: white;
+}
+.accent { color: #e94560; font-weight: bold; }
+.big-text { font-size: 96px; font-weight: bold; margin: 40px 0; }
+.medium-text { font-size: 64px; font-weight: bold; margin: 30px 0; }
+.small-text { font-size: 36px; line-height: 1.8; }
+.title { font-size: 72px; font-weight: bold; margin-bottom: 40px; }
+.subtitle { font-size: 48px; color: #666; }
+.highlight-box {
+  background: rgba(233, 69, 96, 0.1);
+  border-left: 8px solid #e94560;
+  padding: 40px 60px;
+  font-size: 48px;
+  max-width: 1400px;
+  text-align: left;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1600px;
+}
+.grid-item {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.grid-value { font-size: 72px; font-weight: bold; color: #e94560; }
+.grid-label { font-size: 28px; color: #666; margin-top: 10px; }
+.process {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 42px;
+}
+.process-item {
+  background: white;
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.arrow { font-size: 48px; color: #e94560; }
+.footer {
+  position: absolute;
+  bottom: 60px;
+  font-size: 28px;
+  color: rgba(255,255,255,0.5);
+}
+</style>
+</head>
+<body>
+<!-- 封面 -->
+<div class="slide title-slide">
+  <div class="title">德胧AI虫洞落地实践分享</div>
+  <div class="subtitle" style="color: rgba(255,255,255,0.7); margin-top: 20px;">天津瑞湾开元名都酒店</div>
+  <div class="footer">晁留柱 | 2026年4月</div>
+</div>
+
+<!-- 核心理念 -->
+<div class="slide data-slide">
+  <div class="highlight-box">
+    "让AI成为宾客与酒店之间<br>永远开着的那条信道"
+  </div>
+</div>
+
+<!-- 服务闭环 -->
+<div class="slide content-slide">
+  <div class="title" style="color: #1a1a2e;">神灯AI完整服务闭环</div>
+  <div class="process">
+    <div class="process-item">📱<br>需求感知</div>
+    <div class="arrow">→</div>
+    <div class="process-item">🤖<br>智能调度</div>
+    <div class="arrow">→</div>
+    <div class="process-item">👨‍🔧<br>人力执行</div>
+    <div class="arrow">→</div>
+    <div class="process-item">📊<br>数据回流</div>
+  </div>
+</div>
+
+<!-- 效率数据 -->
+<div class="slide data-slide">
+  <div class="title" style="color: white;">关键效率数据</div>
+  <div class="grid">
+    <div class="grid-item">
+      <div class="grid-value">83%</div>
+      <div class="grid-label">报修效率提升</div>
+    </div>
+    <div class="grid-item">
+      <div class="grid-value">98%</div>
+      <div class="grid-label">竞对分析提升</div>
+    </div>
+    <div class="grid-item">
+      <div class="grid-value">500%</div>
+      <div class="grid-label">知识库填充</div>
+    </div>
+  </div>
+</div>
+
+<!-- 入住对比 -->
+<div class="slide content-slide">
+  <div class="title" style="color: #1a1a2e;">入住效率革命</div>
+  <div style="display: flex; gap: 100px; margin-top: 60px;">
+    <div style="text-align: center;">
+      <div style="font-size: 120px; color: #999;">15分钟</div>
+      <div style="font-size: 36px; color: #666; margin-top: 20px;">以前</div>
+    </div>
+    <div style="font-size: 100px; color: #e94560; align-self: center;">→</div>
+    <div style="text-align: center;">
+      <div class="accent" style="font-size: 120px;">10秒</div>
+      <div style="font-size: 36px; color: #666; margin-top: 20px;">现在</div>
+    </div>
+  </div>
+</div>
+
+<!-- 工单分布 -->
+<div class="slide data-slide">
+  <div class="title" style="color: white;">工单类型分布</div>
+  <div class="grid">
+    <div class="grid-item">
+      <div class="grid-value">46.5%</div>
+      <div class="grid-label">送物类</div>
+    </div>
+    <div class="grid-item">
+      <div class="grid-value">24.8%</div>
+      <div class="grid-label">酒店咨询</div>
+    </div>
+    <div class="grid-item">
+      <div class="grid-value">10.3%</div>
+      <div class="grid-label">维修类</div>
+    </div>
+  </div>
+</div>
+
+<!-- 投入产出 -->
+<div class="slide content-slide">
+  <div class="title" style="color: #1a1a2e;">投入产出分析</div>
+  <div style="display: flex; gap: 150px; margin-top: 80px;">
+    <div style="text-align: center;">
+      <div style="font-size: 72px; color: #e94560; font-weight: bold;">2.5万</div>
+      <div style="font-size: 32px; color: #666; margin-top: 15px;">年投入</div>
+    </div>
+    <div style="text-align: center;">
+      <div style="font-size: 72px; color: #28a745; font-weight: bold;">9万+</div>
+      <div style="font-size: 32px; color: #666; margin-top: 15px;">年收益</div>
+    </div>
+    <div style="text-align: center;">
+      <div class="accent" style="font-size: 72px;">948%</div>
+      <div style="font-size: 32px; color: #666; margin-top: 15px;">投资回报率</div>
+    </div>
+  </div>
+</div>
+
+<!-- AI成长 -->
+<div class="slide data-slide">
+  <div class="title" style="color: white;">AI成长历程</div>
+  <div class="process">
+    <div class="process-item">2023<br>懵懂期</div>
+    <div class="arrow">→</div>
+    <div class="process-item">2024<br>觉醒期</div>
+    <div class="arrow">→</div>
+    <div class="process-item">2025<br>深水期</div>
+    <div class="arrow">→</div>
+    <div class="process-item">2026<br>现在</div>
+  </div>
+</div>
+
+<!-- 三点心得 -->
+<div class="slide content-slide">
+  <div class="title" style="color: #1a1a2e;">三点心得</div>
+  <div class="small-text" style="text-align: left; max-width: 1400px;">
+    <div style="margin: 30px 0;">1️⃣ <strong>不要等"准备好了"再开始</strong><br>
+    <span style="color: #666;">最好的学习方式是动手去做，试错成本很低，但错过的成本很高。</span></div>
+    <div style="margin: 30px 0;">2️⃣ <strong>AI是每个酒店人都能用好的效率工具</strong><br>
+    <span style="color: #666;">我一个做运营的，不是程序员，不也一步步做起来了吗？</span></div>
+    <div style="margin: 30px 0;">3️⃣ <strong>未来酒店竞争是AI能力的竞争</strong><br>
+    <span style="color: #666;">越早布局越占优势。</span></div>
+  </div>
+</div>
+
+<!-- 结束 -->
+<div class="slide title-slide">
+  <div class="big-text">谢谢！</div>
+  <div class="subtitle">联系方式：louis.chao@delonixmail.com</div>
+  <div class="footer">天津瑞湾开元名都酒店 | 晁留柱</div>
+</div>
+
+</body>
+</html>

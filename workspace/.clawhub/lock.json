@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "wechat-mp-reader": {
+      "version": "1.0.0",
+      "installedAt": 1775599382108
+    },
+    "ai-podcast": {
+      "version": "1.0.11",
+      "installedAt": 1775618282320
+    }
+  }
+}
