@@ -10,7 +10,7 @@
     }
   ],
   "bestEffort": false,
-  "retryCount": 3,
-  "lastAttemptAt": 1775725391964,
+  "retryCount": 5,
+  "lastAttemptAt": 1775740217128,
   "lastError": "Request failed with status code 400"
 }

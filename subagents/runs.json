@@ -2492,6 +2492,40 @@
       "frozenResultCapturedAt": 1775633242051,
       "endedHookEmittedAt": 1775633760995,
       "cleanupCompletedAt": 1775633760999
+    },
+    "bf72e451-9123-466c-8ea3-f940cf7b8ded": {
+      "runId": "bf72e451-9123-466c-8ea3-f940cf7b8ded",
+      "childSessionKey": "agent:main:subagent:07f43287-261b-4e98-8f0a-c0ecf08405bb",
+      "controllerSessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "requesterSessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "requesterOrigin": {
+        "channel": "feishu",
+        "to": "user:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+        "accountId": "default"
+      },
+      "requesterDisplayKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "task": "你现在是测试龙虾，回复：✅ subagent spawn成功！当前时间是什么？把这个简短回复发回来即可。",
+      "cleanup": "keep",
+      "expectsCompletionMessage": true,
+      "spawnMode": "run",
+      "model": "miaoda/miaoda-model-auto",
+      "workspaceDir": "/home/gem/workspace/agent/workspace",
+      "runTimeoutSeconds": 60,
+      "createdAt": 1775737749646,
+      "startedAt": 1775737756419,
+      "sessionStartedAt": 1775737749646,
+      "accumulatedRuntimeMs": 0,
+      "cleanupHandled": true,
+      "retainAttachmentsOnKeep": false,
+      "endedAt": 1775737762749,
+      "outcome": {
+        "status": "ok"
+      },
+      "endedReason": "subagent-complete",
+      "frozenResultText": "✅ subagent spawn成功！当前时间是 **2026年4月9日 20:29（GMT+8）** 🦞",
+      "frozenResultCapturedAt": 1775737763703,
+      "endedHookEmittedAt": 1775737849580,
+      "cleanupCompletedAt": 1775737849585
     }
   }
 }

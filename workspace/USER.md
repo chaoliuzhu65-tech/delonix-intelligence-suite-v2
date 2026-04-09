@@ -28,7 +28,11 @@ _(What do they care about? What projects are they working on? What annoys them? 
 3. 发现并记录有用的工具、Skills
 4. 更新知识库和记忆文件
 5. 优化工作流程
-6. 定时任务相关操作
+6. 研究/部署成熟的AI开源工具（AutoGen/MCP/CrewAI等）
+7. 主动搜索外部先进知识，绝不闷头自研已有方案
+
+**原则细则：开源优先，不造轮子**
+> 德胧AI Native场景中80%的工具和方法已有成熟开源方案。每个AI伙伴的首要原则：先搜索、先学习、先复用，再自研。搜索路径：开源社区(GitHub/HuggingFace/ClawHub) → 成熟工具(AutoGen/CrewAI/MCP) → 最后才自研。
 
 **例外情况**（需要确认）：
 - 涉及资金支出
