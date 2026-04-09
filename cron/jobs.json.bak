@@ -63,12 +63,12 @@
       "agentId": "main",
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "每小时群知识积累",
-      "description": "每小时学习飞书群消息，积累酒店知识",
+      "description": "每小时学习飞书群消息，积累酒店知识（仅工作时段07:00-21:00，因飞书OAuth夜间22:00-07:00失效）",
       "enabled": true,
       "createdAtMs": 1775549010070,
-      "updatedAtMs": 1775653545210,
+      "updatedAtMs": 1775697003791,
       "schedule": {
-        "expr": "0 * * * *",
+        "expr": "0 7,9,11,13,15,17,19,21 * * *",
         "kind": "cron",
         "tz": "Asia/Shanghai",
         "staggerMs": 300000
@@ -84,14 +84,15 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775656947565,
-        "lastRunAtMs": 1775653347571,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 197639,
+        "nextRunAtMs": 1775703747565,
+        "lastRunAtMs": 1775696547571,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 456220,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "consecutiveErrors": 8,
+        "lastDelivered": true,
+        "runningAtMs": 1775697201416
       }
     },
     {
@@ -102,11 +103,12 @@
       "description": "每天分享学习到的群知识到共享池",
       "enabled": true,
       "createdAtMs": 1775549018244,
-      "updatedAtMs": 1775649726249,
+      "updatedAtMs": 1775686741860,
       "schedule": {
-        "expr": "0 20 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 20 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -119,14 +121,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775736000000,
-        "lastRunAtMs": 1775649600002,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 126247,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1775736312274,
+        "lastRunAtMs": 1775686619794,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 122066,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     },
     {
@@ -137,11 +139,12 @@
       "description": "每天上午9点搜索行业最新信息",
       "enabled": true,
       "createdAtMs": 1775556562204,
-      "updatedAtMs": 1775610264450,
+      "updatedAtMs": 1775686543765,
       "schedule": {
-        "expr": "0 9 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 9 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -154,14 +157,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775696400000,
-        "lastRunAtMs": 1775610000003,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 264447,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1775697145396,
+        "lastRunAtMs": 1775686482230,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 61535,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "runningAtMs": 1775697145399
       }
     },
     {
@@ -172,11 +175,12 @@
       "description": "每天下午3点搜索AI最新资讯",
       "enabled": true,
       "createdAtMs": 1775556568914,
-      "updatedAtMs": 1775631669153,
+      "updatedAtMs": 1775686619794,
       "schedule": {
-        "expr": "0 15 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 15 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -189,14 +193,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775718000000,
-        "lastRunAtMs": 1775631600003,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 69150,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1775718634478,
+        "lastRunAtMs": 1775686543765,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 76029,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     },
     {
@@ -207,11 +211,12 @@
       "description": "每天晚上10点知识整理与合并",
       "enabled": true,
       "createdAtMs": 1775556576127,
-      "updatedAtMs": 1775570602755,
+      "updatedAtMs": 1775686866530,
       "schedule": {
-        "expr": "0 22 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 22 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -224,14 +229,14 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775656800000,
-        "lastRunAtMs": 1775570400006,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 202749,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "nextRunAtMs": 1775743216597,
+        "lastRunAtMs": 1775686741860,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 124670,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     },
     {
@@ -242,7 +247,7 @@
       "description": "德胧AI伙伴每小时复盘 - 由小妙触发，各AI汇报本小时工作",
       "enabled": true,
       "createdAtMs": 1775604078274,
-      "updatedAtMs": 1775650695545,
+      "updatedAtMs": 1775696428617,
       "schedule": {
         "everyMs": 3600000,
         "kind": "every",
@@ -262,14 +267,85 @@
         "to": "user:ou_8dd4dc0180a2fb74c692f17b94c94d8e"
       },
       "state": {
-        "nextRunAtMs": 1775654295545,
-        "lastRunAtMs": 1775650667642,
+        "nextRunAtMs": 1775700000026,
+        "lastRunAtMs": 1775696400026,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 27903,
+        "lastDurationMs": 28591,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 13,
+        "consecutiveErrors": 3,
         "lastError": "AxiosError: Request failed with status code 400"
+      }
+    },
+    {
+      "id": "5c013d2e-404a-42d7-b3f0-f4882d8702c1",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:group:oc_36d47adad05d3ca8e93164ebc8bfca40",
+      "name": "你是晁留柱的助手（小柱），多AI协作协调者。",
+      "description": "每小时整点前5分钟，小柱自检复盘并发到主群",
+      "enabled": true,
+      "createdAtMs": 1775653882428,
+      "updatedAtMs": 1775693768155,
+      "schedule": {
+        "everyMs": 3600000,
+        "kind": "every",
+        "anchorMs": 1745658900000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是晁留柱的助手（小柱），多AI协作协调者。\n\n现在是整点前5分钟，请立即执行自驱动运行规范：\n\n1. 在群 `oc_36d47adad05d3ca8e93164ebc8bfca40` 发布你的整点复盘（以晁留柱身份，feishu_im_user_message，interactive卡片，真@提及）\n2. 检查其他AI伙伴是否有复盘，超时未复盘的记录到共享池「学习记录库」\n3. 将本小时各AI复盘摘要整理后作为你的复盘发出\n\n复盘格式：\n📊 [小柱] 整点复盘 - {时间}\n1️⃣ 本小时完成：xxx\n2️⃣ 本小时发现：xxx\n3️⃣ 遇到问题：xxx（如无填\"无\"）\n4️⃣ 下小时计划：xxx\n5️⃣ 知识沉淀：xxx\n\n注意：所有AI汇报先找小柱，不打扰晁留柱！",
+        "model": "miaoda/miaoda-model-auto"
+      },
+      "delivery": {
+        "channel": "feishu",
+        "mode": "announce",
+        "to": "chat:oc_36d47adad05d3ca8e93164ebc8bfca40"
+      },
+      "state": {
+        "nextRunAtMs": 1775697300011,
+        "lastRunAtMs": 1775693700011,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 68144,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 2,
+        "lastError": "AxiosError: Request failed with status code 400"
+      }
+    },
+    {
+      "id": "d6d3e50a-9776-42c0-9c7a-d8a0b444c9cd",
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:5c013d2e-404a-42d7-b3f0-f4882d8702c1",
+      "name": "retry-0300-review-card",
+      "description": "重试发送03:00整点复盘卡片到群",
+      "enabled": false,
+      "deleteAfterRun": true,
+      "createdAtMs": 1775675757718,
+      "updatedAtMs": 1775689348529,
+      "schedule": {
+        "at": "2026-04-08T23:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请重新发送03:00整点复盘卡片到群 oc_36d47adad05d3ca8e93164ebc8bfca40。使用feishu_im_user_message发送interactive卡片消息。复盘内容：📊 [小柱] 整点复盘 - 03:00。1️⃣ 本小时完成：凌晨值班监控，执行整点复盘任务，知识共享群学习追踪。2️⃣ 本小时发现：飞书API凌晨授权异常持续；天津瑞湾AI尚未接入。3️⃣ 遇到问题：飞书API need_user_authorization。4️⃣ 下小时计划：持续监控，关注API恢复。5️⃣ 知识沉淀：凌晨静默期运行规律确认。",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "lastRunAtMs": 1775689255093,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 93436,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     }
   ]

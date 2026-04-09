@@ -1,0 +1,16 @@
+{
+  "id": "8855e4eb-1608-4cd4-9425-4c21f4c3ce02",
+  "enqueuedAt": 1775710957720,
+  "channel": "feishu",
+  "to": "user:ou_8dd4dc0180a2fb74c692f17b94c94d8e",
+  "accountId": "default",
+  "payloads": [
+    {
+      "text": "⚠️ Cron job \"AI伙伴每小时复盘\" failed: AxiosError: Request failed with status code 400"
+    }
+  ],
+  "bestEffort": false,
+  "retryCount": 3,
+  "lastAttemptAt": 1775725383455,
+  "lastError": "Request failed with status code 400"
+}

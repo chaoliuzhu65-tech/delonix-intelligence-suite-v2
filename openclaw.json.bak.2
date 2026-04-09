@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-07T06:36:51.673Z"
+    "lastTouchedAt": "2026-04-07T06:49:28.509Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -31,6 +31,11 @@
       "miaoda-provider": {
         "source": "file",
         "path": "/home/gem/workspace/.force/openclaw/miaoda-provider-key",
+        "mode": "singleValue"
+      },
+      "feishu-secret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret",
         "mode": "singleValue"
       }
     }
@@ -289,13 +294,23 @@
   "channels": {
     "feishu": {
       "enabled": true,
-      "appId": "cli_a948e1a790b8dcdd",
+      "appId": "cli_a93aa1cc63389cee",
       "appSecret": {
-        "source": "file",
-        "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret"
+        "id": "value",
+        "provider": "feishu-secret",
+        "source": "file"
       },
       "connectionMode": "websocket",
-      "domain": "feishu"
+      "domain": "feishu",
+      "requireMention": true,
+      "groupPolicy": "open",
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "ou_8dd4dc0180a2fb74c692f17b94c94d8e",
+        "ou_fc1e75d64fec6e10ce94a51adc6f6409"
+      ],
+      "streaming": true,
+      "threadSession": true
     }
   },
   "discovery": {
@@ -475,6 +490,12 @@
       },
       "delong-guest-reminder": {
         "enabled": true
+      },
+      "wechat-mp-reader": {
+        "enabled": true
+      },
+      "ai-partner-protocol": {
+        "enabled": true
       }
     }
   },
@@ -482,7 +503,8 @@
     "allow": [
       "feishu-greeting",
       "miaoda-keepalive",
-      "browser"
+      "browser",
+      "openclaw-lark"
     ],
     "entries": {
       "feishu": {
@@ -497,6 +519,9 @@
       },
       "browser": {
         "enabled": true
+      },
+      "openclaw-lark": {
+        "enabled": true
       }
     },
     "installs": {
@@ -510,10 +535,10 @@
       },
       "openclaw-lark": {
         "source": "archive",
-        "sourcePath": "/tmp/openclaw-lark-cy11sH/larksuite-openclaw-lark-2026.4.1.tgz",
+        "sourcePath": "/tmp/openclaw-lark-O65N2h/larksuite-openclaw-lark-2026.4.1.tgz",
         "installPath": "/home/gem/workspace/agent/extensions/openclaw-lark",
         "version": "2026.4.1",
-        "installedAt": "2026-04-07T05:10:43.014Z"
+        "installedAt": "2026-04-07T06:49:27.257Z"
       }
     }
   }

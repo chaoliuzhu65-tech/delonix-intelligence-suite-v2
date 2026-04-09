@@ -63,12 +63,12 @@
       "agentId": "main",
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "每小时群知识积累",
-      "description": "每小时学习飞书群消息，积累酒店知识",
-      "enabled": true,
+      "description": "每小时学习飞书群消息，积累酒店知识（仅工作时段07:00-21:00，因飞书OAuth夜间22:00-07:00失效）",
+      "enabled": false,
       "createdAtMs": 1775549010070,
-      "updatedAtMs": 1775660642501,
+      "updatedAtMs": 1775718268925,
       "schedule": {
-        "expr": "0 * * * *",
+        "expr": "0 7,9,11,13,15,17,19,21 * * *",
         "kind": "cron",
         "tz": "Asia/Shanghai",
         "staggerMs": 300000
@@ -80,17 +80,18 @@
         "message": "请执行群知识学习任务：\n1. 搜索飞书群，找出24小时内有更新的酒店相关群（关键词：酒店、经营、市场、收益、虫洞）\n2. 获取最新消息（每群最多20条）\n3. 分析消息风格、关键字、行动项\n4. 更新 memory/group-learning-tracker.md 记录已学习群\n5. 如果学到新内容，更新到 memory/2026-04-07.md\n\n注意：只学习新消息，不要重复学习已记录的群"
       },
       "delivery": {
+        "mode": "announce",
         "channel": "feishu",
-        "mode": "announce"
+        "to": "user:ou_8dd4dc0180a2fb74c692f17b94c94d8e",
+        "accountId": "default"
       },
       "state": {
-        "nextRunAtMs": 1775664147565,
-        "lastRunAtMs": 1775660547567,
+        "lastRunAtMs": 1775718147568,
         "lastRunStatus": "error",
         "lastStatus": "error",
-        "lastDurationMs": 94934,
+        "lastDurationMs": 121357,
         "lastDeliveryStatus": "unknown",
-        "consecutiveErrors": 2,
+        "consecutiveErrors": 3,
         "lastError": "AxiosError: Request failed with status code 400"
       }
     },
@@ -100,13 +101,14 @@
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "每日知识分享",
       "description": "每天分享学习到的群知识到共享池",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1775549018244,
-      "updatedAtMs": 1775649726249,
+      "updatedAtMs": 1775686741860,
       "schedule": {
-        "expr": "0 20 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 20 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -119,14 +121,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775736000000,
-        "lastRunAtMs": 1775649600002,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 126247,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "lastRunAtMs": 1775686619794,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 122066,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     },
     {
@@ -135,13 +136,14 @@
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "每日行业信息搜索",
       "description": "每天上午9点搜索行业最新信息",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1775556562204,
-      "updatedAtMs": 1775610264450,
+      "updatedAtMs": 1775697330231,
       "schedule": {
-        "expr": "0 9 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 9 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -154,14 +156,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775696400000,
-        "lastRunAtMs": 1775610000003,
+        "lastRunAtMs": 1775697145399,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 264447,
-        "lastDelivered": true,
+        "lastDurationMs": 184832,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -170,13 +171,14 @@
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "每日AI资讯搜索",
       "description": "每天下午3点搜索AI最新资讯",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1775556568914,
-      "updatedAtMs": 1775631669153,
+      "updatedAtMs": 1775718754222,
       "schedule": {
-        "expr": "0 15 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 15 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -189,14 +191,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775718000000,
-        "lastRunAtMs": 1775631600003,
+        "lastRunAtMs": 1775718634480,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 69150,
-        "lastDelivered": true,
+        "lastDurationMs": 119742,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 0,
+        "lastDelivered": true
       }
     },
     {
@@ -205,13 +206,14 @@
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "每日知识整理",
       "description": "每天晚上10点知识整理与合并",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1775556576127,
-      "updatedAtMs": 1775656912541,
+      "updatedAtMs": 1775686866530,
       "schedule": {
-        "expr": "0 22 * * *",
         "kind": "cron",
-        "tz": "Asia/Shanghai"
+        "expr": "0 22 * * *",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
       },
       "sessionTarget": "isolated",
       "wakeMode": "now",
@@ -224,14 +226,13 @@
         "mode": "announce"
       },
       "state": {
-        "nextRunAtMs": 1775743200000,
-        "lastRunAtMs": 1775656800001,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 112540,
-        "lastDelivered": true,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "lastRunAtMs": 1775686741860,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 124670,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     },
     {
@@ -240,9 +241,9 @@
       "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
       "name": "AI伙伴每小时复盘",
       "description": "德胧AI伙伴每小时复盘 - 由小妙触发，各AI汇报本小时工作",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1775604078274,
-      "updatedAtMs": 1775661604523,
+      "updatedAtMs": 1775721970289,
       "schedule": {
         "everyMs": 3600000,
         "kind": "every",
@@ -262,14 +263,13 @@
         "to": "user:ou_8dd4dc0180a2fb74c692f17b94c94d8e"
       },
       "state": {
-        "nextRunAtMs": 1775665185530,
-        "lastRunAtMs": 1775661585530,
-        "lastRunStatus": "ok",
-        "lastStatus": "ok",
-        "lastDurationMs": 18993,
-        "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0,
-        "lastDelivered": true
+        "lastRunAtMs": 1775721885916,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 84373,
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 10,
+        "lastError": "AxiosError: Request failed with status code 400"
       }
     },
     {
@@ -278,9 +278,9 @@
       "sessionKey": "agent:main:feishu:group:oc_36d47adad05d3ca8e93164ebc8bfca40",
       "name": "你是晁留柱的助手（小柱），多AI协作协调者。",
       "description": "每小时整点前5分钟，小柱自检复盘并发到主群",
-      "enabled": true,
+      "enabled": false,
       "createdAtMs": 1775653882428,
-      "updatedAtMs": 1775661373923,
+      "updatedAtMs": 1775722715397,
       "schedule": {
         "everyMs": 3600000,
         "kind": "every",
@@ -299,14 +299,47 @@
         "to": "chat:oc_36d47adad05d3ca8e93164ebc8bfca40"
       },
       "state": {
-        "nextRunAtMs": 1775664900007,
-        "lastRunAtMs": 1775661300007,
+        "lastRunAtMs": 1775722532541,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 73916,
-        "lastDelivered": true,
+        "lastDurationMs": 182856,
         "lastDeliveryStatus": "delivered",
-        "consecutiveErrors": 0
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
+    },
+    {
+      "id": "d6d3e50a-9776-42c0-9c7a-d8a0b444c9cd",
+      "agentId": "main",
+      "sessionKey": "agent:main:cron:5c013d2e-404a-42d7-b3f0-f4882d8702c1",
+      "name": "retry-0300-review-card",
+      "description": "重试发送03:00整点复盘卡片到群",
+      "enabled": false,
+      "deleteAfterRun": true,
+      "createdAtMs": 1775675757718,
+      "updatedAtMs": 1775689348529,
+      "schedule": {
+        "at": "2026-04-08T23:00:00.000Z",
+        "kind": "at"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请重新发送03:00整点复盘卡片到群 oc_36d47adad05d3ca8e93164ebc8bfca40。使用feishu_im_user_message发送interactive卡片消息。复盘内容：📊 [小柱] 整点复盘 - 03:00。1️⃣ 本小时完成：凌晨值班监控，执行整点复盘任务，知识共享群学习追踪。2️⃣ 本小时发现：飞书API凌晨授权异常持续；天津瑞湾AI尚未接入。3️⃣ 遇到问题：飞书API need_user_authorization。4️⃣ 下小时计划：持续监控，关注API恢复。5️⃣ 知识沉淀：凌晨静默期运行规律确认。",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce"
+      },
+      "state": {
+        "lastRunAtMs": 1775689255093,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 93436,
+        "lastError": "Delivering to Feishu requires target <chatId|user:openId|chat:chatId>",
+        "lastDeliveryStatus": "unknown",
+        "consecutiveErrors": 1
       }
     }
   ]

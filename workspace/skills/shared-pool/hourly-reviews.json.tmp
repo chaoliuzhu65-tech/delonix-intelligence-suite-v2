@@ -1,0 +1,8 @@
+,
+  "failedSend": {
+    "time": "2026-04-09T07:15:00+08:00",
+    "chatId": "oc_36d47adad05d3ca8e93164ebc8bfca40",
+    "method": "feishu_im_user_message",
+    "error": "应用缺少 application:application:self_manage 权限",
+    "review": "本小时完成：群知识学习cron+每日知识整理；本小时发现：API应用级权限丢失；遇到问题：完全无法访问飞书；下小时计划：通知晁留柱处理"
+  }

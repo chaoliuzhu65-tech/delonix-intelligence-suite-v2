@@ -36,6 +36,10 @@ _(What do they care about? What projects are they working on? What annoys them? 
 - 涉及权限变更
 - 涉及删除操作
 
+**权限获取规则（2026-04-09 补充）**：
+- 即日起，所有需要的飞书OAuth权限可直接申请获取，无需逐次请示
+- 用户授权卡片触发后自动完成，无需人工干预
+
 ---
 
 **更新记录**：2026-04-06 建立此规则
