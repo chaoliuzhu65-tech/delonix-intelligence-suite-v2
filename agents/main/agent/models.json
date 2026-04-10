@@ -131,6 +131,47 @@
           "maxTokens": 16000
         }
       ]
+    },
+    "minimax-token-plan": {
+      "baseUrl": "https://api.minimaxi.com/v1",
+      "apiKey": "secretref-managed",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "MiniMax-M2.7-highspeed",
+          "name": "MiniMax M2.7 Highspeed",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cacheRead": 0.06,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 16000,
+          "api": "openai-completions"
+        },
+        {
+          "id": "MiniMax-M2.7",
+          "name": "MiniMax M2.7",
+          "reasoning": true,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0.3,
+            "output": 1.2,
+            "cacheRead": 0.06,
+            "cacheWrite": 0
+          },
+          "contextWindow": 200000,
+          "maxTokens": 16000,
+          "api": "openai-completions"
+        }
+      ]
     }
   }
 }

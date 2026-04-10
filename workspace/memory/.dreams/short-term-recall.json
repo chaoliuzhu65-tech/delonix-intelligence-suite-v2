@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-09T09:55:37.325Z",
+  "updatedAt": "2026-04-10T13:11:24.536Z",
   "entries": {
     "memory:memory/2026-04-06.md:1:32": {
       "key": "memory:memory/2026-04-06.md:1:32",
@@ -403,17 +403,19 @@
       "endLine": 61,
       "source": "memory",
       "snippet": "- 明天9:00定时任务：给虫洞效率群发送一对一沟通邀约 ### 5. 日程提醒 - 4月7日 9:00-9:30：沟通北方西北区域虫洞上线事宜 - 4月7日 10:00-10:30：筹划活动会 + 督促执政官竞选 ## 重要信息 ### 飞书群列表 - 虫洞效率群：oc_7fbb3e67d82d905ffbee225f3a66d765 - 北方西北区域店总会议：oc_7db77621c3aeb5fe4347f852fe8af702（成员10人） ### 北方西北区域店总名单 | 姓名 | OpenID | |------|--------| | 李兵 | ou_cd795df3fa5a4907b5caf92a1a7d9af6 | | 康学亮 | ou_4f965c888866ae54f35a22091d62ded4 | | 张熙然 | ou_7f586325f8b8a6204a6c368384ebc25d | | 迟伟 | ou_bf107f8c66e03ae0de68aead25dc39bb | | 张石强 | ou_c9e33b9a477630b57e643b301f07b22b | | 刘建锋 | ou_1bd68457cdaf4608263086e4d59aa463 | | 耿宗男 | ou_27be669f2f2a77c519c7b8eb52d0fd11 | | 黄承 | ou_be1516db3bb315cb8920a167a43a6c20 | | 陈宽 | ou_daa2a65965daa9a1fe5f68bf394ba99f | | 梁军 | ou_1",
-      "recallCount": 1,
+      "recallCount": 2,
       "dailyCount": 0,
-      "totalScore": 0.7873131400585492,
+      "totalScore": 1.5203344119611937,
       "maxScore": 0.7873131400585492,
       "firstRecalledAt": "2026-04-09T09:55:37.325Z",
-      "lastRecalledAt": "2026-04-09T09:55:37.325Z",
+      "lastRecalledAt": "2026-04-10T13:11:24.536Z",
       "queryHashes": [
-        "9801d14b4b9f"
+        "9801d14b4b9f",
+        "fef2d90ee153"
       ],
       "recallDays": [
-        "2026-04-09"
+        "2026-04-09",
+        "2026-04-10"
       ],
       "conceptTags": [
         "00-9",
@@ -424,6 +426,97 @@
         "效率",
         "发送",
         "一对"
+      ]
+    },
+    "memory:memory/2026-04-07.md:42:66": {
+      "key": "memory:memory/2026-04-07.md:42:66",
+      "path": "memory/2026-04-07.md",
+      "startLine": 42,
+      "endLine": 66,
+      "source": "memory",
+      "snippet": "- ⚠️ **安全风险被点名**：OpenClaw 可绕过 EDR/DLP/IAM 而不触发警报 - Anthropic 宣布 **切断 OpenClaw 使用 Claude 订阅的能力** --- ## 🧠 多 Agent 协作进展 - VentureBeat 文章指出：**共享本体论（Ontology）** 是多 Agent 协作的核心 - 多 Agent 系统需要统一\"语言\"和\"行为准则\"，结合信任框架和分布式身份体系 - AI Agent 生态系统可大幅减轻人类认知负担 --- ## 📌 本日最重要信息 ### TOP 1: Anthropic Project Glasswing - AI 网络安全格局被重塑 Anthropic 发布了一款自认为\"太危险不能发布\"的 AI 模型 Claude Mythos Preview，用于自动发现零日漏洞。联合 12 家科技/金融巨头组建网络安全联盟，承诺让防御者先于攻击者获得能力。这代表了 AI 安全领域的重大转变：从\"事后修补\"到\"主动防御\"，同时也揭示了前沿 AI 模型本身的双刃剑特性。 ### TOP 2: Nvidia Agent Toolkit 发布 - 企业 AI Agent 时代开启 英伟达在 GTC 2026 发布开源 Agent 构建平台，17 家企业级软件巨头（Adobe/Salesforce/SAP/ServiceNow/Siemens/Palantir/Atlassian 等）首批采用。这标志着 AI Agent 从实验走向企业级标准化生产，多 Agent 协作在企业场景正式落地。 --",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "totalScore": 1.7044304443240226,
+      "maxScore": 0.8522152221620113,
+      "firstRecalledAt": "2026-04-10T13:11:20.445Z",
+      "lastRecalledAt": "2026-04-10T13:11:20.446Z",
+      "queryHashes": [
+        "f7055ea5fb75",
+        "ff71361ad00d"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "网络",
+        "edr/dlp/iam",
+        "家科技/金融巨头组建网络安全联盟",
+        "安全",
+        "风险",
+        "openclaw",
+        "edr",
+        "dlp"
+      ]
+    },
+    "memory:memory/2026-04-07.md:21:49": {
+      "key": "memory:memory/2026-04-07.md:21:49",
+      "path": "memory/2026-04-07.md",
+      "startLine": 21,
+      "endLine": 49,
+      "source": "memory",
+      "snippet": "### 3. Nvidia Agent Toolkit 发布（GTC 2026） - 英伟达发布开源 AI Agent 构建平台 - 17 家企业首批采用：Adobe、Salesforce、SAP、ServiceNow、Siemens、CrowdStrike、Atlassian、Palantir、Red Hat、Cisco 等 - 覆盖各行业 Fortune 500 企业 ### 4. GLM 发布 GLM-5.1 开源模型 - 国产模型智谱 GLM 发布 GLM-5.1 开源版，声称在多项基准上 **超越 GPT-4o 和 Claude Opus-4** ### 5. Meta AI 战略 - Meta AI 主管 Alexandr Wang 表示：Meta \"最终\"会开源更多模型，但首先要确保安全 ### 6. Jeff Bezos 押注 AI - Bezos 旗下 AI 实验室 **Project Prometheus**（联合前 Google 高管 Vikram Bajaj）挖走 xAI 联合创始人 Kyle Kozic，专注 AI 改善制造业 --- ## 🦞 OpenClaw 相关 - VentureBeat 专题文章：**\"Claude, OpenClaw and the new reality: AI agents are here — and so is the chaos\"** - 文章对比了 OpenClaw（本地深度系统访问）、Google Antigravity（编程 Agent）、Claude Cowork（垂直领域 Agent） -",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.749443128738549,
+      "maxScore": 0.749443128738549,
+      "firstRecalledAt": "2026-04-10T13:11:20.446Z",
+      "lastRecalledAt": "2026-04-10T13:11:20.446Z",
+      "queryHashes": [
+        "ff71361ad00d"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "gpt",
+        "glm-5.1",
+        "gpt-4o",
+        "opus-4",
+        "nvidia",
+        "toolkit",
+        "发布",
+        "gtc"
+      ]
+    },
+    "memory:memory/2026-04-10.md:62:89": {
+      "key": "memory:memory/2026-04-10.md:62:89",
+      "path": "memory/2026-04-10.md",
+      "startLine": 62,
+      "endLine": 89,
+      "source": "memory",
+      "snippet": "- MEMORY.md原记录有误，已修正：晁留柱 ↔ ou_fc1e75d64fec6e10ce94a51adc6f6409 - \"方源兵\"的真实OpenID待确认 ## 身份确认（2026-04-10 20:06） - 花名：小柱（不是\"小云\"） - 后台：妙搭 - 模型：MiniMax Token Plan高速版 - 手册中的\"小云\"是另一个独立Agent - 已分析MiniMax模型能力特点 - 已写入共享池：`知识资产库/技术方案/德胧AI伙伴模型能力分析.md` - 建议Qclaw专注：实时消息处理、高频任务 - 互补模式：Qclaw(高速) + 小柱(深度) - 全部同意已下发方案 - 会认真注意工作机制 - 身份问题已确认：ou_fc1e75d64fec6e10ce94a51adc6f6409 = 晁留柱（已验证） 已向ArkClaw、Qclaw、腾讯云发送统一的多Agent建立指南： - sessions_spawn方法 - 建议的子Agent角色分工 - 注意事项 - 等待ArkClaw、腾讯云详细反馈 - 循环跟进Cron：下次检查 8:30 ## 20:11 自动检查执行 - 任务看板检查完成：6个任务，1个进行中，5个待执行 - **注意**：看板缺少\"最后更新时间\"字段，无法检测60分钟超时Dead状态 - 心跳时间已更新 - 进度已汇报至共享池：`工作进度库/项目进度/`",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "totalScore": 0.7320762537964014,
+      "maxScore": 0.7320762537964014,
+      "firstRecalledAt": "2026-04-10T13:11:24.536Z",
+      "lastRecalledAt": "2026-04-10T13:11:24.536Z",
+      "queryHashes": [
+        "fef2d90ee153"
+      ],
+      "recallDays": [
+        "2026-04-10"
+      ],
+      "conceptTags": [
+        "memory.md原记录有误",
+        "知识资产库/技术方案/德胧ai伙伴模型能力分析.md",
+        "sessions-spawn方法",
+        "工作进度库/项目进度",
+        "memory.md",
+        "记录",
+        "修正",
+        "真实"
       ]
     }
   }

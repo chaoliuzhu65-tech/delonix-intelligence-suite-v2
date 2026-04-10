@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-08T22:06:44.081Z"
+    "lastTouchedAt": "2026-04-10T07:07:20.352Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -42,6 +42,11 @@
         "mode": "json",
         "path": "/home/gem/workspace/.force/openclaw/miaoda-openclaw-secrets.json",
         "source": "file"
+      },
+      "minimax-token-plan-secret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/minimax-token-plan-key",
+        "mode": "singleValue"
       }
     }
   },
@@ -182,13 +187,56 @@
             "api": "openai-completions"
           }
         ]
+      },
+      "minimax-token-plan": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "apiKey": {
+          "source": "file",
+          "provider": "minimax-token-plan-secret",
+          "id": "value"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "MiniMax-M2.7-highspeed",
+            "name": "MiniMax M2.7 Highspeed",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          }
+        ]
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "miaoda/miaoda-model-auto"
+        "primary": "minimax-token-plan/MiniMax-M2.7-highspeed"
       },
       "models": {
         "miaoda/miaoda-model-auto": {

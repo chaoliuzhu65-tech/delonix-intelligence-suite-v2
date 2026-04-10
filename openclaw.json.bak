@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-08T15:24:09.222Z"
+    "lastTouchedAt": "2026-04-08T22:06:44.081Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -112,7 +112,7 @@
             "api": "openai-completions"
           },
           {
-            "id": "glm-5.1",
+            "id": "glm-5",
             "name": "GLM-5.1",
             "reasoning": true,
             "input": [
@@ -129,7 +129,7 @@
             "api": "openai-completions"
           },
           {
-            "id": "qwen-3.6",
+            "id": "qwen-3.6-plus",
             "name": "Qwen 3.6",
             "reasoning": true,
             "input": [
@@ -299,10 +299,10 @@
   "channels": {
     "feishu": {
       "enabled": true,
-      "appId": "cli_a93aa1cc63389cee",
+      "appId": "cli_a948e1a790b8dcdd",
       "appSecret": {
-        "id": "/channels_feishu_app_secret",
-        "provider": "miaoda-secret-provider",
+        "id": "value",
+        "provider": "feishu-secret",
         "source": "file"
       },
       "connectionMode": "websocket",

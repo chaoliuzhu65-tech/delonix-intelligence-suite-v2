@@ -379,6 +379,44 @@
         "lastErrorReason": "format",
         "lastError": "422 ⚠️ 对话额度已用完，[升级获取更多额度](https://www.feishu.cn/admin-light/value-added/create-order?boss_from=feishu_miaoda&function_scene=miaoda_bot_limit_reached_message&function_type=AI_credits_personal&license_plan_key=feishu_ai_meeting_notes_prem&scene_key=scene_ai_personal_member) ，或[人工协助升级](https://work.weixin.qq.com/ca/cawcde18e7d8f217f3)。也可在管理设置页面配置自定义 API Key 继续使用。"
       }
+    },
+    {
+      "id": "53656e40-4892-4759-a73e-a11dc01082b5",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "【小柱-自动检查】请执行以下操作：1. 检查任务看板最新任务状态；2. 更新自己的最后心跳时间；3. 如果有任务超60…",
+      "description": "每小时扫描核心群并更新任务看板状态",
+      "enabled": true,
+      "createdAtMs": 1775822917580,
+      "updatedAtMs": 1775830336721,
+      "schedule": {
+        "expr": "0 * * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai",
+        "staggerMs": 900000
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "【小柱-自动检查】请执行以下操作：1. 检查任务看板最新任务状态；2. 更新自己的最后心跳时间；3. 如果有任务超60分钟未更新，标记为Dead；4. 汇总进度汇报到共享池工作进度库。",
+        "timeoutSeconds": 180
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "ou_fc1e75d64fec6e10ce94a51adc6f6409",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1775833866654,
+        "lastRunAtMs": 1775830266659,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 70062,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0,
+        "lastDelivered": true
+      }
     }
   ]
 }
