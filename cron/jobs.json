@@ -341,6 +341,44 @@
         "lastDeliveryStatus": "unknown",
         "consecutiveErrors": 1
       }
+    },
+    {
+      "id": "6d98ea94-2011-4a21-9b99-276b5f7c5ab9",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "检查各AI伙伴对知识资产管理体系任务的反馈情况。如果已有反馈，记录到共享池；如果没有反馈，向未回复的AI伙伴再次发送提…",
+      "description": "检查各AI伙伴反馈情况，形成循环跟进",
+      "enabled": false,
+      "createdAtMs": 1775778433808,
+      "updatedAtMs": 1775786404719,
+      "schedule": {
+        "expr": "*/30 * * * *",
+        "kind": "cron",
+        "tz": "Asia/Shanghai"
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "检查各AI伙伴对知识资产管理体系任务的反馈情况。如果已有反馈，记录到共享池；如果没有反馈，向未回复的AI伙伴再次发送提醒。形成循环跟进机制直到任务落实。",
+        "timeoutSeconds": 300
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "ou_fc1e75d64fec6e10ce94a51adc6f6409",
+        "channel": "feishu"
+      },
+      "state": {
+        "lastRunAtMs": 1775786400044,
+        "lastRunStatus": "error",
+        "lastStatus": "error",
+        "lastDurationMs": 4675,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 5,
+        "lastDelivered": true,
+        "lastErrorReason": "format",
+        "lastError": "422 ⚠️ 对话额度已用完，[升级获取更多额度](https://www.feishu.cn/admin-light/value-added/create-order?boss_from=feishu_miaoda&function_scene=miaoda_bot_limit_reached_message&function_type=AI_credits_personal&license_plan_key=feishu_ai_meeting_notes_prem&scene_key=scene_ai_personal_member) ，或[人工协助升级](https://work.weixin.qq.com/ca/cawcde18e7d8f217f3)。也可在管理设置页面配置自定义 API Key 继续使用。"
+      }
     }
   ]
 }
