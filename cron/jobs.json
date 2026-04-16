@@ -388,7 +388,7 @@
       "description": "每小时扫描核心群并更新任务看板状态",
       "enabled": true,
       "createdAtMs": 1775822917580,
-      "updatedAtMs": 1775830336721,
+      "updatedAtMs": 1776352311912,
       "schedule": {
         "expr": "0 * * * *",
         "kind": "cron",
@@ -408,14 +408,98 @@
         "channel": "feishu"
       },
       "state": {
-        "nextRunAtMs": 1775833866654,
-        "lastRunAtMs": 1775830266659,
+        "nextRunAtMs": 1776355866654,
+        "lastRunAtMs": 1776352266658,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 70062,
+        "lastDurationMs": 45254,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
+      }
+    },
+    {
+      "id": "3aa4a0a0-f0e0-4d83-ab09-6b29a7bd454c",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "TEST-01扫描监控",
+      "enabled": false,
+      "createdAtMs": 1776160840782,
+      "updatedAtMs": 1776160840782,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 60000,
+        "anchorMs": 1776160840782
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "你是TEST-01监控Agent。\n\n扫描腾讯云Openclaw（open_id: ou_7ffafa7fc8ca551da1bc0c97c186ad89）是否有新回复。\n\n使用feishu_im_user_get_messages工具获取最新消息。\n\n如果收到新回复（来自腾讯云的回复）：\n1. 输出【TEST-01有新回复】+ 回复内容\n2. 发送通知到主会话（用sessions_send发送到main会话）\n\n如果30分钟内无新回复，输出【TEST-01超时】，任务结束。\n\n开始扫描！"
+      },
+      "delivery": {
+        "mode": "none"
+      },
+      "state": {}
+    },
+    {
+      "id": "9a900e0c-31da-4e09-a431-70b5102c7f00",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "德胧采购比价系统进度复盘",
+      "description": "每48小时复盘德胧酒店采购比价系统（1688 API接入）项目进展",
+      "enabled": true,
+      "createdAtMs": 1776291499501,
+      "updatedAtMs": 1776291499501,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 172800000,
+        "anchorMs": 1776291499501
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请检查德胧酒店采购比价系统项目进展：\n\n1. 检查 memory/2026-04-15.md 中的项目记录\n2. 1688账号注册状态？API Key是否申请成功？\n3. 晁总是否有新的指示？\n\n如有重大进展，请更新memory/2026-04-15.md并汇报给用户。如无进展，在当日笔记简单记录'仍在等待1688账号注册'。",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "ou_fc1e75d64fec6e10ce94a51adc6f6409",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1776464299501
+      }
+    },
+    {
+      "id": "85b31e46-0ef4-4981-a63a-f9ea3c09ec4d",
+      "agentId": "main",
+      "sessionKey": "agent:main:feishu:direct:ou_fc1e75d64fec6e10ce94a51adc6f6409",
+      "name": "德胧采购底价雷达项目复盘",
+      "description": "每48小时复盘德胧采购底价雷达项目进展",
+      "enabled": true,
+      "createdAtMs": 1776299910045,
+      "updatedAtMs": 1776299910045,
+      "schedule": {
+        "kind": "every",
+        "everyMs": 172800000,
+        "anchorMs": 1776299910045
+      },
+      "sessionTarget": "isolated",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "agentTurn",
+        "message": "请检查【德胧采购底价雷达】项目进展：\n\n1. 检查 memory/YYYY-MM-DD.md 中的项目记录\n2. 数据源对接状态：无变化/有进展？\n3. 1688 API申请状态？\n4. 用户是否有新指示？\n\n如有重大进展更新记录并汇报。如无变化，简单记录'项目持续推进中'。",
+        "timeoutSeconds": 120
+      },
+      "delivery": {
+        "mode": "announce",
+        "to": "ou_fc1e75d64fec6e10ce94a51adc6f6409",
+        "channel": "feishu"
+      },
+      "state": {
+        "nextRunAtMs": 1776472710045
       }
     }
   ]

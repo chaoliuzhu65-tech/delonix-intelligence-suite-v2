@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-07T06:48:44.023Z"
+    "lastTouchedAt": "2026-04-10T14:49:20.002Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -29,8 +29,23 @@
   "secrets": {
     "providers": {
       "miaoda-provider": {
-        "source": "file",
+        "mode": "singleValue",
         "path": "/home/gem/workspace/.force/openclaw/miaoda-provider-key",
+        "source": "file"
+      },
+      "feishu-secret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret",
+        "mode": "singleValue"
+      },
+      "miaoda-secret-provider": {
+        "mode": "json",
+        "path": "/home/gem/workspace/.force/openclaw/miaoda-openclaw-secrets.json",
+        "source": "file"
+      },
+      "minimax-token-plan-secret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/minimax-token-plan-key",
         "mode": "singleValue"
       }
     }
@@ -52,7 +67,6 @@
           {
             "id": "miaoda-model-auto",
             "name": "妙搭",
-            "api": "openai-completions",
             "reasoning": false,
             "input": [
               "text"
@@ -64,12 +78,12 @@
               "cacheWrite": 0
             },
             "contextWindow": 200000,
-            "maxTokens": 8192
+            "maxTokens": 8192,
+            "api": "openai-completions"
           },
           {
             "id": "miaoda-auto-multimodal",
             "name": "妙搭多模态",
-            "api": "openai-completions",
             "reasoning": false,
             "input": [
               "text",
@@ -82,12 +96,12 @@
               "cacheWrite": 0
             },
             "contextWindow": 200000,
-            "maxTokens": 8192
+            "maxTokens": 8192,
+            "api": "openai-completions"
           },
           {
             "id": "miaoda-model-flash",
             "name": "妙搭 Flash",
-            "api": "openai-completions",
             "reasoning": false,
             "input": [
               "text"
@@ -99,12 +113,12 @@
               "cacheWrite": 0
             },
             "contextWindow": 200000,
-            "maxTokens": 8192
+            "maxTokens": 8192,
+            "api": "openai-completions"
           },
           {
             "id": "glm-5",
-            "name": "GLM-5",
-            "api": "openai-completions",
+            "name": "GLM-5.1",
             "reasoning": true,
             "input": [
               "text"
@@ -116,12 +130,12 @@
               "cacheWrite": 0
             },
             "contextWindow": 200000,
-            "maxTokens": 30000
+            "maxTokens": 30000,
+            "api": "openai-completions"
           },
           {
-            "id": "qwen-3.5",
-            "name": "Qwen 3.5",
-            "api": "openai-completions",
+            "id": "qwen-3.6-plus",
+            "name": "Qwen 3.6",
             "reasoning": true,
             "input": [
               "text",
@@ -134,12 +148,12 @@
               "cacheWrite": 0
             },
             "contextWindow": 200000,
-            "maxTokens": 16000
+            "maxTokens": 16000,
+            "api": "openai-completions"
           },
           {
-            "id": "minimax-m2.5",
-            "name": "MiniMax M2.5",
-            "api": "openai-completions",
+            "id": "minimax-m2.7",
+            "name": "MiniMax M2.7",
             "reasoning": false,
             "input": [
               "text"
@@ -151,12 +165,12 @@
               "cacheWrite": 0
             },
             "contextWindow": 200000,
-            "maxTokens": 16000
+            "maxTokens": 16000,
+            "api": "openai-completions"
           },
           {
             "id": "doubao-seed-2.0-pro",
             "name": "豆包 Seed 2.0 Pro",
-            "api": "openai-completions",
             "reasoning": true,
             "input": [
               "text",
@@ -166,6 +180,50 @@
               "input": 0,
               "output": 0,
               "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000,
+            "api": "openai-completions"
+          }
+        ]
+      },
+      "minimax-token-plan": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "apiKey": {
+          "source": "file",
+          "provider": "minimax-token-plan-secret",
+          "id": "value"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "MiniMax-M2.7-highspeed",
+            "name": "MiniMax M2.7 Highspeed",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
               "cacheWrite": 0
             },
             "contextWindow": 200000,
@@ -178,7 +236,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "miaoda/miaoda-model-auto"
+        "primary": "minimax-token-plan/MiniMax-M2.7-highspeed"
       },
       "models": {
         "miaoda/miaoda-model-auto": {
@@ -194,13 +252,13 @@
           "alias": "Miaoda Flash"
         },
         "miaoda/glm-5": {
-          "alias": "GLM-5"
+          "alias": "GLM-5.1"
         },
-        "miaoda/qwen-3.5": {
-          "alias": "Qwen 3.5"
+        "miaoda/minimax-m2.7": {
+          "alias": "MiniMax M2.7"
         },
-        "miaoda/minimax-m2.5": {
-          "alias": "MiniMax M2.5"
+        "miaoda/qwen-3.6-plus": {
+          "alias": "Qwen 3.6"
         }
       },
       "workspace": "/home/gem/workspace/agent/workspace",
@@ -291,11 +349,21 @@
       "enabled": true,
       "appId": "cli_a948e1a790b8dcdd",
       "appSecret": {
-        "source": "file",
-        "path": "/home/gem/workspace/agent/.secrets/feishu-app-secret"
+        "id": "value",
+        "provider": "feishu-secret",
+        "source": "file"
       },
       "connectionMode": "websocket",
-      "domain": "feishu"
+      "domain": "feishu",
+      "requireMention": true,
+      "groupPolicy": "open",
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "ou_8dd4dc0180a2fb74c692f17b94c94d8e",
+        "ou_fc1e75d64fec6e10ce94a51adc6f6409"
+      ],
+      "streaming": true,
+      "threadSession": true
     }
   },
   "discovery": {
@@ -475,6 +543,12 @@
       },
       "delong-guest-reminder": {
         "enabled": true
+      },
+      "wechat-mp-reader": {
+        "enabled": true
+      },
+      "ai-partner-protocol": {
+        "enabled": true
       }
     }
   },
@@ -482,7 +556,9 @@
     "allow": [
       "feishu-greeting",
       "miaoda-keepalive",
-      "browser"
+      "browser",
+      "openclaw-lark",
+      "openclaw-extension-miaoda"
     ],
     "entries": {
       "feishu": {
@@ -497,6 +573,12 @@
       },
       "browser": {
         "enabled": true
+      },
+      "openclaw-lark": {
+        "enabled": true
+      },
+      "openclaw-extension-miaoda": {
+        "enabled": true
       }
     },
     "installs": {
@@ -507,6 +589,26 @@
       "miaoda-keepalive": {
         "source": "path",
         "installPath": "./extensions/miaoda-keepalive"
+      },
+      "openclaw-lark": {
+        "source": "archive",
+        "sourcePath": "/tmp/openclaw-lark-O65N2h/larksuite-openclaw-lark-2026.4.1.tgz",
+        "installPath": "/home/gem/workspace/agent/extensions/openclaw-lark",
+        "version": "2026.4.1",
+        "installedAt": "2026-04-07T06:49:27.257Z"
+      },
+      "openclaw-extension-miaoda": {
+        "source": "npm",
+        "spec": "@lark-apaas/openclaw-extension-miaoda",
+        "installPath": "/home/gem/workspace/agent/extensions/openclaw-extension-miaoda",
+        "version": "1.0.7",
+        "resolvedName": "@lark-apaas/openclaw-extension-miaoda",
+        "resolvedVersion": "1.0.7",
+        "resolvedSpec": "@lark-apaas/openclaw-extension-miaoda@1.0.7",
+        "integrity": "sha512-2aYcLVG4XXBZ/u6RWWJtrLPxoecAJ+B2NuK+vHDDXDofkbqit1kykIWUGPGKKBdoV0HUkRY3AA47UHTSYxQGJA==",
+        "shasum": "0eb1048fd67501832163e4f85b57b445440c218c",
+        "resolvedAt": "2026-04-08T15:24:07.727Z",
+        "installedAt": "2026-04-08T15:24:08.124Z"
       }
     }
   }

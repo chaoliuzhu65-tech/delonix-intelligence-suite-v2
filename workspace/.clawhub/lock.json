@@ -12,6 +12,30 @@
     "coze-cli-skill": {
       "version": "0.1.0",
       "installedAt": 1775644381653
+    },
+    "research-report-skill": {
+      "version": "2.0.0",
+      "installedAt": 1775982961697
+    },
+    "business-writing": {
+      "version": "0.1.0",
+      "installedAt": 1775983442003
+    },
+    "competitor-analysis-report": {
+      "version": "1.0.0",
+      "installedAt": 1775983449499
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1776216603147
+    },
+    "claw-security-scanner": {
+      "version": "0.1.1",
+      "installedAt": 1776331502235
+    },
+    "arc-skill-scanner": {
+      "version": "1.4.0",
+      "installedAt": 1776331624060
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "lastTouchedVersion": "2026.4.5",
-    "lastTouchedAt": "2026-04-08T15:24:09.222Z"
+    "lastTouchedAt": "2026-04-10T14:50:46.631Z"
   },
   "wizard": {
     "lastRunAt": "2026-03-05T11:15:21.053Z",
@@ -42,6 +42,11 @@
         "mode": "json",
         "path": "/home/gem/workspace/.force/openclaw/miaoda-openclaw-secrets.json",
         "source": "file"
+      },
+      "minimax-token-plan-secret": {
+        "source": "file",
+        "path": "/home/gem/workspace/agent/.secrets/minimax-token-plan-key",
+        "mode": "singleValue"
       }
     }
   },
@@ -112,7 +117,7 @@
             "api": "openai-completions"
           },
           {
-            "id": "glm-5.1",
+            "id": "glm-5",
             "name": "GLM-5.1",
             "reasoning": true,
             "input": [
@@ -129,7 +134,7 @@
             "api": "openai-completions"
           },
           {
-            "id": "qwen-3.6",
+            "id": "qwen-3.6-plus",
             "name": "Qwen 3.6",
             "reasoning": true,
             "input": [
@@ -182,13 +187,56 @@
             "api": "openai-completions"
           }
         ]
+      },
+      "minimax-token-plan": {
+        "baseUrl": "https://api.minimaxi.com/v1",
+        "apiKey": {
+          "source": "file",
+          "provider": "minimax-token-plan-secret",
+          "id": "value"
+        },
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "MiniMax-M2.7-highspeed",
+            "name": "MiniMax M2.7 Highspeed",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          },
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": true,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0
+            },
+            "contextWindow": 200000,
+            "maxTokens": 16000
+          }
+        ]
       }
     }
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "miaoda/miaoda-model-auto"
+        "primary": "minimax-token-plan/MiniMax-M2.7-highspeed"
       },
       "models": {
         "miaoda/miaoda-model-auto": {
@@ -282,7 +330,12 @@
       "feishu_update_doc",
       "feishu_wiki_space",
       "feishu_wiki_space_node"
-    ]
+    ],
+    "web": {
+      "search": {
+        "provider": "miaoda"
+      }
+    }
   },
   "messages": {
     "ackReactionScope": "group-mentions"
@@ -299,10 +352,10 @@
   "channels": {
     "feishu": {
       "enabled": true,
-      "appId": "cli_a93aa1cc63389cee",
+      "appId": "cli_a948e1a790b8dcdd",
       "appSecret": {
-        "id": "/channels_feishu_app_secret",
-        "provider": "miaoda-secret-provider",
+        "id": "value",
+        "provider": "feishu-secret",
         "source": "file"
       },
       "connectionMode": "websocket",
@@ -553,14 +606,14 @@
         "source": "npm",
         "spec": "@lark-apaas/openclaw-extension-miaoda",
         "installPath": "/home/gem/workspace/agent/extensions/openclaw-extension-miaoda",
-        "version": "1.0.7",
+        "version": "1.0.8",
         "resolvedName": "@lark-apaas/openclaw-extension-miaoda",
-        "resolvedVersion": "1.0.7",
-        "resolvedSpec": "@lark-apaas/openclaw-extension-miaoda@1.0.7",
-        "integrity": "sha512-2aYcLVG4XXBZ/u6RWWJtrLPxoecAJ+B2NuK+vHDDXDofkbqit1kykIWUGPGKKBdoV0HUkRY3AA47UHTSYxQGJA==",
-        "shasum": "0eb1048fd67501832163e4f85b57b445440c218c",
-        "resolvedAt": "2026-04-08T15:24:07.727Z",
-        "installedAt": "2026-04-08T15:24:08.124Z"
+        "resolvedVersion": "1.0.8",
+        "resolvedSpec": "@lark-apaas/openclaw-extension-miaoda@1.0.8",
+        "integrity": "sha512-qPslCVQrDgROr7g4WimrEdKaG7fmPuz8ak4aUwvvGazd6zL+x5NoKeYgy9KIg+asbnW8dXE/BSSuqg0ZiSugVQ==",
+        "shasum": "5bf0b6ef7240972acd734a1274b33760de02ec60",
+        "resolvedAt": "2026-04-10T14:49:51.454Z",
+        "installedAt": "2026-04-10T14:49:51.714Z"
       }
     }
   }

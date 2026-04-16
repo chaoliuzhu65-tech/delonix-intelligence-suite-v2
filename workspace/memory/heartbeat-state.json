@@ -1,6 +1,20 @@
 {
-  "lastChecks": {
-    "task": 1744296660,
-    "heartbeat": 1744296660
+  "lastHeartbeat": 1744817460000,
+  "lastHeartbeatISO": "2026-04-16T14:11:00Z",
+  "lastCheck": {
+    "taskBoard": {
+      "total": 37,
+      "done": 3,
+      "running": 4,
+      "blocked": 1,
+      "dead": 5,
+      "checks": 27
+    },
+    "aiCollabTable": {
+      "total": 6,
+      "pending": 5,
+      "inProgress": 1
+    },
+    "newDeadTasks": 0
   }
 }
