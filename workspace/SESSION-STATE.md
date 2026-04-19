@@ -42,5 +42,6 @@
 
 ## Last Updated
 
-**Timestamp:** 2026-04-15T01:35:00+08:00
+**Timestamp:** 2026-04-17T00:11:00+08:00
+**Last Heartbeat:** 2026-04-17 00:11 UTC
 **Trigger:** 启用WAL Protocol，解决被动复读问题

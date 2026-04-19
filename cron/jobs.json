@@ -388,7 +388,7 @@
       "description": "每小时扫描核心群并更新任务看板状态",
       "enabled": true,
       "createdAtMs": 1775822917580,
-      "updatedAtMs": 1776352311912,
+      "updatedAtMs": 1776568363214,
       "schedule": {
         "expr": "0 * * * *",
         "kind": "cron",
@@ -408,11 +408,11 @@
         "channel": "feishu"
       },
       "state": {
-        "nextRunAtMs": 1776355866654,
-        "lastRunAtMs": 1776352266658,
+        "nextRunAtMs": 1776571866654,
+        "lastRunAtMs": 1776568266659,
         "lastRunStatus": "ok",
         "lastStatus": "ok",
-        "lastDurationMs": 45254,
+        "lastDurationMs": 96555,
         "lastDeliveryStatus": "delivered",
         "consecutiveErrors": 0,
         "lastDelivered": true
@@ -450,7 +450,7 @@
       "description": "每48小时复盘德胧酒店采购比价系统（1688 API接入）项目进展",
       "enabled": true,
       "createdAtMs": 1776291499501,
-      "updatedAtMs": 1776291499501,
+      "updatedAtMs": 1776464357006,
       "schedule": {
         "kind": "every",
         "everyMs": 172800000,
@@ -469,7 +469,14 @@
         "channel": "feishu"
       },
       "state": {
-        "nextRunAtMs": 1776464299501
+        "nextRunAtMs": 1776637099506,
+        "lastRunAtMs": 1776464299506,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 57500,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     },
     {
@@ -480,7 +487,7 @@
       "description": "每48小时复盘德胧采购底价雷达项目进展",
       "enabled": true,
       "createdAtMs": 1776299910045,
-      "updatedAtMs": 1776299910045,
+      "updatedAtMs": 1776472734409,
       "schedule": {
         "kind": "every",
         "everyMs": 172800000,
@@ -499,7 +506,14 @@
         "channel": "feishu"
       },
       "state": {
-        "nextRunAtMs": 1776472710045
+        "nextRunAtMs": 1776645510048,
+        "lastRunAtMs": 1776472710048,
+        "lastRunStatus": "ok",
+        "lastStatus": "ok",
+        "lastDurationMs": 24361,
+        "lastDelivered": true,
+        "lastDeliveryStatus": "delivered",
+        "consecutiveErrors": 0
       }
     }
   ]
