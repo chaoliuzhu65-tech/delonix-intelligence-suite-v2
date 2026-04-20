@@ -94,6 +94,12 @@ read("skills/技能名/SKILL.md")
 
 ## 🔄 技能更新记录
 
+### 2026-04-19 新增
+- ✅ **德胧舆情采集龙虾工具**（delonix-web-intelligence）
+  - 整合 miaoda-web-search + AutoCLI + 飞书卡片
+  - 路径：`skills/delonix-web-intelligence/SKILL.md`
+  - 触发词：舆情、情报、网情、监控、行业动态
+
 ### 2026-04-08 新增
 - ✅ 播客视频生成技术手册
 - ✅ 多AI知识共享池
@@ -120,3 +126,45 @@ read("skills/技能名/SKILL.md")
 
 *本技能库由晁留柱的助手维护*
 *持续更新中...*
+
+### 2026-04-19 新增（v3.0通用版）
+- ✅ **hotel-intelligence-suite**（酒店舆情情报综合工具箱 v3.0通用版）
+  - 通用版，支持任意酒店集团复用，无硬编码
+  - 整合：miaoda搜索 + BettaFish(17k Stars) + 抖音监控 + 飞书卡片 + AI风险分析
+  - GitHub: chaoliuzhu65-tech/hotel-intelligence-suite
+  - 触发词：舆情、情报、网情、监控、风险分析、酒店日报
+
+### 2026-04-20 新增（妙搭fork开源版）
+- ✅ **delonix-web-search**（德胧开源网络搜索）
+  - 基于DuckDuckGo开源库ddgs，**无需API Key**
+  - 所有AI伙伴均可独立安装使用
+  - 触发词：搜索、网页搜索、搜一下、查资料
+- ✅ **delonix-web-fetch**（德胧开源网页抓取）
+  - 基于trafilatura开源库，**无需API Key**
+  - 所有AI伙伴均可独立安装使用
+  - 触发词：网页抓取、提取网页内容、web crawl
+- ✅ **delonix-doc-parse**（德胧开源文档解析）
+  - 基于pdfplumber/python-docx，**纯本地解析无需上传**
+  - 支持PDF/Word/Excel/PPT/TXT
+  - 触发词：文档解析、解析PDF、解析Word
+- ✅ **delonix-image-understanding**（德胧开源图片理解）
+  - 封装系统内置图片理解能力
+  - 触发词：图片理解、图片分析、图片描述
+
+**安装包位置**（可直接安装）：
+- `~/.npm-global/lib/node_modules/openclaw/skills/` 下skills目录
+- GitHub: chaoliuzhu65-tech/delonix-intelligence-suite-v2
+
+**Python依赖**：
+```bash
+pip3 install ddgs trafilatura pdfplumber python-docx python-pptx openpyxl -q
+```
+
+### 2026-04-19 v3.1 两层架构更新
+- ✅ **hotel-intelligence-suite v3.1**（两层架构版）
+  - 舆情风险层：每2小时快捷扫描，黑猫/微博/抖音全覆盖
+  - 差评维度层：每日10点采集，12维度OTA分类管理
+  - 支持交互调整：调频率/增竞品/改推送/暂停任务等
+  - 飞书多维表格：Jx5Ibjc3WaJVgwsUOzQcHq56nyc
+  - GitHub: chaoliuzhu65-tech/hotel-intelligence-suite
+  - 触发词：舆情、情报、网情、监控、风险分析、酒店日报、差评管理
